@@ -1,0 +1,46 @@
+/*basic styling*/
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+:root {
+    --off-white: #F5F5F5;
+    --mid-red: #D30731;
+    --dk-red: #630316;
+    --mid-green: #00A334;
+    --dk-green: #00290D;
+    --max-width: 1500px;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: var(--off-white);
+}
+
+header {
+    border-bottom: 5px solid var(--mid-green);
+    color: var(--mid-red);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.how-to {
+    font-size: 1.25rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.score {
+    color: var(--dk-green);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
