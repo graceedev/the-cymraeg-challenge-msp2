@@ -14,7 +14,7 @@ body {
     font-family: 'Karla', sans-serif;
     background-color: var(--off-white);
 }
-
+/*header*/
 header {
     border-bottom: 5px solid var(--mid-green);
     color: var(--mid-red);
@@ -24,6 +24,12 @@ header {
     text-align: center;
 }
 
+@media screen and (max-width: 348px) {
+    header {
+        height: 150px;
+    }
+}
+
 .title {
     font-weight: bold;
 }
@@ -31,6 +37,42 @@ header {
 .how-to {
     font-size: 1.25rem;
 }
+
+/*main game section*/
+
+.game {
+    padding-top: 125px;
+}
+
+.row {
+    text-align: center;
+}
+
+.card {
+    display: inline-block;
+    width: 125px;
+    height: 125px;
+    margin: 10px;
+    background: var(--dk-red) url("../images/welsh-flag.png") no-repeat center center;
+    background-size: cover;
+}
+
+.card:hover {
+    animation-name: hover-zoom;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hover-zoom {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+
+/*footer*/
 
 footer {
     position: absolute;
