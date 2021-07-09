@@ -46,12 +46,13 @@ header {
 }
 
 .row {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 .card {
     display: inline-block;
-    width: 125px;
+    width: 30%;
     height: 125px;
     margin: 10px;
     background: var(--dk-red) url("../images/welsh-flag.png") no-repeat center center;
