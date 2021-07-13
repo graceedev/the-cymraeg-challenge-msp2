@@ -26,12 +26,6 @@ header {
     margin-right: auto;
 }
 
-@media screen and (max-width: 348px) {
-    header {
-        height: 150px;
-    }
-}
-
 .title {
     font-size: large;
     font-weight: bold;
@@ -76,7 +70,7 @@ header {
     width: 30%;
     height: 125px;
     margin: 10px;
-    background: var(--dk-green) url("../images/daffodils.png") no-repeat center center;
+    background: var(--dk-green) url("../images/daffodils.jpg") no-repeat center center;
     background-size: cover;
 }
 
