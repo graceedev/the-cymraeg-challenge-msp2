@@ -52,6 +52,8 @@ header {
 
 .game {
     padding-top: 50px;
+    overflow: hidden;
+    height: 100%;
 }
 
 @media only screen and (min-width: 500px) {
@@ -68,10 +70,34 @@ header {
 .card {
     display: inline-block;
     width: 30%;
-    height: 125px;
+    height: 70px;
     margin: 10px;
     background: var(--dk-green) url("../images/daffodils.jpg") no-repeat center center;
     background-size: cover;
+}
+
+@media only screen and (min-height: 600px) {
+    .card {
+        height: 120px;
+    }
+}
+
+@media only screen and (min-height:700px) {
+    .card {
+        height: 150px;
+    }
+}
+
+@media only screen and (min-height: 800px) {
+    .card {
+        height: 155px;
+    }
+}
+
+@media only screen and (min-height: 900px) {
+    .card {
+        height: 200px;
+    }
 }
 
 .card:hover {
@@ -96,6 +122,9 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
+    height: 50px;
+    background-color: var(--off-white);
+    padding-bottom: 10px;
 }
 
 .score {
