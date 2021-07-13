@@ -55,7 +55,7 @@ header {
     width: 30%;
     height: 125px;
     margin: 10px;
-    background: var(--dk-red) url("../images/welsh-flag.png") no-repeat center center;
+    background: var(--dk-green) url("../images/daffodils.png") no-repeat center center;
     background-size: cover;
 }
 
