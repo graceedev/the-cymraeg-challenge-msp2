@@ -35,11 +35,16 @@ header {
 .title {
     font-size: large;
     font-weight: bold;
+    margin-top: 18px;
 }
 
 #how-to {
     font-size: small;
     margin-right: 1rem;
+}
+
+#how-to:hover {
+    text-decoration: underline;
 }
 
 @media only screen and (min-width: 500px) {
@@ -55,11 +60,19 @@ header {
 }
 
 /*main game section*/
+#game-container {
+    position: relative;
+    min-height: 100vh;
+    max-width: 100%;
+}
 
 .game {
     padding-top: 50px;
     overflow: hidden;
     height: 100%;
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media only screen and (min-width: 500px) {
