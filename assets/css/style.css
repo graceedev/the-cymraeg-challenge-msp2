@@ -16,6 +16,10 @@ body {
     max-width: var(--max-width);
 }
 
+.content-wrapper {
+    height: 100vh;
+}
+
 nav {
     margin-left: auto;
     margin-right: auto;
@@ -29,56 +33,35 @@ header {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 50px;
+    height: 6%;
 }
 
 .title {
-    font-size: large;
+    font-size: 1rem;
     font-weight: bold;
-    margin-top: 18px;
 }
 
 #how-to {
     font-size: small;
-    margin-right: 1rem;
+    margin-right: 5%;
 }
 
 #how-to:hover {
     text-decoration: underline;
 }
 
-@media only screen and (min-width: 500px) {
-    .title {
-        font-size: xx-large;
-    }
-    #how-to {
-        font-size: large;
-    }
-    header {
-        height: 65px;
-    }
-}
-
 /*main game section*/
 #game-container {
-    position: relative;
-    min-height: 100vh;
-    max-width: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+    height: 90vh;
 }
 
 .game {
     padding-top: 50px;
-    overflow: hidden;
-    height: 100%;
-    max-width: var(--max-width);
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media only screen and (min-width: 500px) {
-    .game {
-        padding-top: 65px;
-    }
+    height: 90vh;
 }
 
 .row {
@@ -89,34 +72,10 @@ header {
 .card {
     display: inline-block;
     width: 30%;
-    height: 70px;
-    margin: 10px;
+    height: 15vh;
+    margin: 1%;
     background: var(--dk-green) url("../images/daffodils.jpg") no-repeat center center;
     background-size: cover;
-}
-
-@media only screen and (min-height: 600px) {
-    .card {
-        height: 120px;
-    }
-}
-
-@media only screen and (min-height:700px) {
-    .card {
-        height: 150px;
-    }
-}
-
-@media only screen and (min-height: 800px) {
-    .card {
-        height: 155px;
-    }
-}
-
-@media only screen and (min-height: 900px) {
-    .card {
-        height: 200px;
-    }
 }
 
 .card:hover {
@@ -141,9 +100,9 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
-    height: 50px;
+    height: 7%;
     background-color: var(--off-white);
-    padding-bottom: 10px;
+    padding-bottom: 10%;
 }
 
 .score {
@@ -151,3 +110,117 @@ footer {
     font-weight: bold;
     font-size: 1.5rem;
 }
+
+/*basic styling*/
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+:root {
+    --off-white: #F5F5F5;
+    --mid-red: #D30731;
+    --dk-red: #630316;
+    --mid-green: #00A334;
+    --dk-green: #00290D;
+    --max-width: 1500px;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: var(--off-white);
+    max-width: var(--max-width);
+}
+
+.content-wrapper {
+    height: 100vh;
+}
+
+nav {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+}
+    
+/*header*/
+header {
+    border-bottom: 5px solid var(--mid-green);
+    color: var(--mid-red);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 6%;
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#how-to {
+    font-size: small;
+    margin-right: 5%;
+}
+
+#how-to:hover {
+    text-decoration: underline;
+}
+
+/*main game section*/
+#game-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+    height: 90vh;
+}
+
+.game {
+    padding-top: 50px;
+    height: 90vh;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    display: inline-block;
+    width: 30%;
+    height: 15vh;
+    margin: 1%;
+    background: var(--dk-green) url("../images/daffodils.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.card:hover {
+    animation-name: hover-zoom;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hover-zoom {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+
+/*footer*/
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 7%;
+    background-color: var(--off-white);
+    padding-bottom: 10%;
+}
+
+.score {
+    color: var(--dk-green);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
