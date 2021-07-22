@@ -10,9 +10,9 @@ function clickHowTo() {
 
 /* Start game - reveal cards and start timer */
 function changeCards() {
-  let cards = document.getElementsByClassName('card');
-  
-  for (let i = 0; i < cards.length; i++){
-      cards[i].classList.remove = "hidden";
+  let cards = Array.from(document.getElementsByClassName('card'));
+
+  for (let i = 0; i < cards.length; i++) {
+    cards[i].classList.remove("hidden");
   }
 }
