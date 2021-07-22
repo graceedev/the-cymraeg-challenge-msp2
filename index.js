@@ -7,3 +7,12 @@ function clickHowTo() {
       x.style.display = "none";
     }
   }
+
+/* Start game - reveal cards and start timer */
+function changeCards() {
+  let cards = document.getElementsByClassName('card');
+  
+  for (let i = 0; i < cards.length; i++){
+      cards[].classList.remove = "hidden";
+  }
+}
