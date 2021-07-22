@@ -13,6 +13,6 @@ function changeCards() {
   let cards = document.getElementsByClassName('card');
   
   for (let i = 0; i < cards.length; i++){
-      cards[].classList.remove = "hidden";
+      cards[i].classList.remove = "hidden";
   }
 }
