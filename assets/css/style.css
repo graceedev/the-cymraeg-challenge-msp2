@@ -50,6 +50,16 @@ header {
     text-decoration: underline;
 }
 
+#how-to-text {
+    display: none;
+    background-color: var(--off-white);
+    max-width: var(--max-width);
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    border: 5px solid var(--mid-green)
+}
+
 /*main game section*/
 #game-container {
     width: 80%;
