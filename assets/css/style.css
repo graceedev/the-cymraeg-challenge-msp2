@@ -36,6 +36,12 @@ header {
     height: 6%;
 }
 
+@media only screen and (max-height: 600px) {
+    header {
+        height: 8%;
+    }
+}
+
 .title {
     font-size: 1rem;
     font-weight: bold;
@@ -72,6 +78,19 @@ header {
 .game {
     padding-top: 50px;
     height: 90vh;
+}
+
+#btn-play {
+    position: absolute;
+    color: var(--dk-green);
+    border: 5px solid var(--mid-green);
+    background-color: var(--off-white);
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+#btn-play:hover {
+    font-size: 3.5rem;
 }
 
 .row {
