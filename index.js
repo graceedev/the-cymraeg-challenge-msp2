@@ -15,4 +15,8 @@ function changeCards() {
   for (let i = 0; i < cards.length; i++) {
     cards[i].classList.remove("hidden");
   }
+
+  var x = document.getElementById("btn-play");
+    x.classList.add("hidden");
 }
+
