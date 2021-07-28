@@ -30,7 +30,6 @@ nav {
     
 /*header*/
 header {
-    border-bottom: 5px solid var(--mid-green);
     color: var(--mid-red);
     position: absolute;
     top: 0;
@@ -50,6 +49,7 @@ header {
 .title {
     font-size: 1rem;
     font-weight: bold;
+    margin-left: 5%;
 }
 
 #how-to {
@@ -93,6 +93,10 @@ header {
     background-color: var(--off-white);
     font-size: 3rem;
     font-weight: 600;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30vh;
 }
 
 #btn-play:hover {
