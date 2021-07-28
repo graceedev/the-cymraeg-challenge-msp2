@@ -20,3 +20,16 @@ function changeCards() {
     x.classList.add("hidden");
 }
 
+/* Click cards to reveal words */
+function cardClicked(event) {
+  this.style.background = "var(--dk-green)";
+  let words = $(this).find('p');
+    console.log(words);
+}
+
+
+let cards = document.getElementsByClassName('card');
+let i = 0;
+for (i = 0; i < cards.length; i++) {
+cards[i].addEventListener('click', cardClicked);
+}
