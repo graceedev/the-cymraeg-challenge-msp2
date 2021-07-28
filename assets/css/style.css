@@ -87,7 +87,6 @@ header {
 }
 
 #btn-play {
-    position: absolute;
     color: var(--dk-green);
     border: 5px solid var(--mid-green);
     background-color: var(--off-white);
