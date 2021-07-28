@@ -17,7 +17,7 @@ function changeCards() {
   }
 
   var x = document.getElementById("btn-play");
-    x.classList.add("hidden");
+    x.style.display = "none";   
 }
 
 /* Click cards to reveal words */
