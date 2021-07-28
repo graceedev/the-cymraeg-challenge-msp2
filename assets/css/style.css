@@ -54,6 +54,7 @@ header {
 
 #how-to:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 #how-to-text {
@@ -91,6 +92,7 @@ header {
 
 #btn-play:hover {
     font-size: 3.5rem;
+    cursor: pointer;
 }
 
 .row {
@@ -111,6 +113,7 @@ header {
     animation-name: hover-zoom;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
+    cursor: pointer;
 }
 
 .hidden {
