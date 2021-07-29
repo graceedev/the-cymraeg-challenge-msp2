@@ -8,7 +8,7 @@ function clickHowTo() {
     }
   }
 
-/* Start game - reveal cards and start timer */
+/* Start game - reveal cards*/
 function changeCards() {
   let cards = Array.from(document.getElementsByClassName('card'));
 
@@ -26,22 +26,72 @@ function cardClicked(event) {
   this.firstChild.classList.remove("hidden");
 }
 
-
 let cards = document.getElementsByClassName('card');
 let i = 0;
 for (i = 0; i < cards.length; i++) {
 cards[i].addEventListener('click', cardClicked);
 }
 
-/* Generate random words from word bank*/
+var wordBank = {
+  Welcome: 'Croeso',
+  Beer: 'Cwrw',
+  Good: 'Da',
+  Morning: 'Bore',
+  Afternoon: 'Prynhawn',
+  Night: 'Nos',
+  Welsh: 'Cymraeg',
+  English: 'Saesneg',
+  Thanks: 'Diolch',
+  Name: 'Enw',
+  Carrot: 'Moron',
+  Bread: 'Bara',
+  Apple: 'Afal',
+  Sausage: 'Selsig',
+  Goodbye: 'Hwyl Fawr',
+  Tea: 'Te',
+  Wine: 'Gwin',
+  Water: 'Dwr',
+  Coffee: 'Coffi',
+  Saucepan: 'Sosban',
+  Drink: 'Yfed',
+  Eat: 'Bwyta',
+  Dog: 'Ci',
+  Cat: 'Cath',
+  Egg: 'Wy',
+  Microwave: 'Meicrodon',
+  Jacket: 'Siaced',
+  Shoes: 'Esgidiau',
+  Skirt: 'Sgert',
+  Very: 'Iawn',
+  Awful: 'Ofnadwy',
+  Swimming: 'Nofio',
+  Yes: 'Ydw',
+  No: 'Nac ydw',
+  New: 'Newydd',
+  Again: 'Eto',
+  Breakfast: 'Brecwast',
+  Day: 'Dydd',
+  Shirt: 'Crys',
+  Milk: 'Llaneth',
+  Enjoy: 'Mwynhau',
+  Like: 'Hoffi',
+  One: 'Un',
+  Two: 'Dau',
+  Three: 'Tre',
+  Four: 'Pedwar',
+  Five: 'Pump',
+  Library: 'Llyfrgell',
+};
+var keys = Object.keys(wordBank),
+length = keys.length;
 
-var wordBank = {'Croeso': Welcome, 'Cwrw': Beer, 'Da': Good, 'Bore': Morning, 
-'Prynhawn': Afternoon, 'Nos': Night, 'Cymraeg': Welsh, 'Saesneg': English,
-'Diolch': Thanks, 'Enw': Name, 'Moron': Carrot, 'Bara': Bread, 'Afal': Apple,
-'Selsig': Sausage, 'Hwyl Fawr': Goodbye, 'Te': Tea, 'Gwin': Wine, 'Dwr': Water,
-'Coffi': Coffee, 'Sosban': Saucepan, 'Yfed': Drink, 'Bwyta': Eat, 'Ci': Dog,
-'Cath': Cat, 'Wy': Egg, 'Meicrodon': Microwave, 'Siaced': Jacket, 'Esgidiau': Shoes,
-'Sgert': Skirt, 'Iawn': Very, 'Ofnadwy': Awful, 'Nofio': Swimming, 'Ydw': Yes, 'Nac ydw': No,
-'Newydd': New, 'Eto': Again, 'Brecwast': Breakfast, 'Dydd': Day, 'Crys': Shirt, 'Llaeth': Milk,
-'Mwynhau': Enjoy, 'Hoffi': Like, 'Un': One, 'Dau': Two, 'Tre': Three, 'Pedwar': Four, 'Pump': Five,
-'Llyfrgell': Library };
+var i,
+  result = [];
+for (i = 0; i < 6; i++) {
+  result.push(wordBank[keys[Math.floor(Math.random() * length)]]);
+}
+console.log(result);
+}
+
+
+
