@@ -68,13 +68,15 @@ var x = document.getElementById("btn-play");
     Five: 'Pump',
     Library: 'Llyfrgell',
   };
-  var keys = Object.keys(wordBank),
+  var keys = Object.keys(wordBank);
+  var values = Object.values(wordBank);
   length = keys.length;
   
   var i,
     result = [];
   for (i = 0; i < 6; i++) {
     result.push(wordBank[keys[Math.floor(Math.random() * length)]]);
+    result.push(wordBank[values[Math.floor(Math.random() * length)]]);
   }
   console.log(result);
   }
@@ -91,6 +93,8 @@ let i = 0;
 for (i = 0; i < cards.length; i++) {
 cards[i].addEventListener('click', cardClicked);
 }
+
+
 
 
 
