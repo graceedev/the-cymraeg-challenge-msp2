@@ -30,3 +30,73 @@ This website will consist of:
 * A congratulations notification that appears at the end of the game
 ## Design 
 ### Surface
+#### Colour
+The main colour scheme is an off-white colour (chosen to reduce eyestrain compared to pure white), a dark red, a mid toned red, a dark green and a mid-toned green.
+The colour scheme was directly lifted from the colours of the Welsh flag, and then adjusted to improve contrast ratings. The colours do not impact on the ability to play the game, making it accessible for those who are red/green colour blind.
+
+#### Typography
+Karla was imported from google fonts for use in this project. Karla was chosen for its simple appearance and readability. As a sans-serif font, it avoids some of the issues associated with letters blending together for dyslexic readers.
+
+#### Call to Action
+
+
+#### Imagery
+
+### Skeleton
+#### Layout
+
+### Features
+
+#### Logo and Navbar
+
+#### Responsiveness
+
+#### Accessibility
+
+#### Footer
+
+#### Meta data
+
+#### Future Features
+
+### Technologies Used
+HTML5
+CCS3
+Gitpod.io
+GitHub
+GIT
+Design
+Bootstrap
+jsDelivr
+Google fonts
+Balsamiq wireframe
+Font Awesome
+Tiny PNG
+ResizePixel
+Testing
+HTML Validator
+CSS Validator
+DEV Tools – Lighthouse
+Wave
+Lambdatest
+
+### Testing
+#### Validator Results
+
+
+#### Usability Testing
+
+
+#### Browser Compatibility
+
+#### OS Compatibiility
+
+
+#### Performance Testing
+
+### User Stories
+
+
+### Deployment
+
+### Credits
