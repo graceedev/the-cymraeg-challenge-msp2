@@ -98,7 +98,7 @@ var wordBank = [
   'welsh': 'Llyfrgell'},
 ];
 
-const card = [];
+const cardContainer = [];
 
 /* global welsh and english variables */ 
 var welsh = [];
@@ -106,7 +106,7 @@ var english = [];
 
 /* Start game - reveal cards, remove play button*/
 function changeCards() {
-let cards = Array.from(document.getElementsByClassName('card'));
+let cards = Array.from(document.getElementsByClassName('cardContainer'));
 
 for (let i = 0; i < cards.length; i++) {
   cards[i].classList.remove("hidden");
@@ -126,31 +126,36 @@ var x = document.getElementById("btn-play");
     }
     console.log(wordBankShuffle)
 
-    /* create card for each welsh/english word*/ 
+    /* create cardContainer for each welsh/english word*/ 
     for (i = 0; i < wordBankShuffle.length; i++) {
       var engCard = document.createElement('div');
       engCard.dataset.index = i;
       engCard.setAttribute('class', 'card');
       engCard.innerHTML = wordBankShuffle[i].english;
-      card.push(engCard);
+      cardContainer.push(engCard);
     }
     for (i = 0; i < wordBankShuffle.length; i++) {
       var welCard = document.createElement('div');
       welCard.dataset.index = i;
       welCard.setAttribute('class', 'card');
       welCard.innerHTML = wordBankShuffle[i].welsh;
-      card.push(welCard);
+      cardContainer.push(welCard);
     }
-    var i = card.length;
+    var i = cardContainer.length;
     if (i == 0) return false;
     while ( --i ) {
       var j = Math.floor(Math.random() * ( i + 1 ));
-      var tempi = card[i];
-      var tempj = card[j];
-      card[i] = tempj;
-      card[j] = tempi;
+      var tempi = cardContainer[i];
+      var tempj = cardContainer[j];
+      cardContainer[i] = tempj;
+      cardContainer[j] = tempi;
     }
-  console.log(card);
+  /*insert new cards into DOM*/ 
+  for (let i of cardContainer) {
+    console.log(i);
+    var element = document.getElementById("game-row");
+    element.appendChild(i);
+  }
 
 }
   /* Click cards to reveal words */
@@ -159,12 +164,9 @@ function cardClicked(event) {
   this.firstChild.classList.remove("hidden");
   }
   
-  let cards = document.getElementsByClassName('card');
+  let cards = document.getElementsByClassName('cardContainer');
   let i = 0;
   for (i = 0; i < cards.length; i++) {
   cards[i].addEventListener('click', cardClicked);
   }
 
-/*for inserting new cards into dom
-var referenceNode = document.querySelector('#game-row');
-referenceNode.after(engCard); */
