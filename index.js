@@ -125,4 +125,18 @@ var x = document.getElementById("btn-play");
       var wordBankShuffle = wordBank.slice(0, 6);
     }
     console.log(wordBankShuffle)
+    for (i = 0; i < wordBankShuffle.length; i++) {
+      let engCard = document.createElement('div');
+      engCard.dataset.index = i;
+      engCard.setAttribute('class', 'card');
+      engCard.innerHTML = wordBankShuffle[i].english;
+      console.log(engCard);
+    }
+    for (i = 0; i < wordBankShuffle.length; i++) {
+      let welCard = document.createElement('div');
+      welCard.dataset.index = i;
+      welCard.setAttribute('class', 'card');
+      welCard.innerHTML = wordBankShuffle[i].welsh;
+      console.log(welCard);
+    }
   }
