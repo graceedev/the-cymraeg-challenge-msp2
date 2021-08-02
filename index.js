@@ -150,23 +150,42 @@ var x = document.getElementById("btn-play");
       cardContainer[i] = tempj;
       cardContainer[j] = tempi;
     }
+    console.log(cardContainer)
   /*insert new cards into DOM*/ 
-  for (let i of cardContainer) {
-    console.log(i);
-    var element = document.getElementById("game-row");
-    element.appendChild(i);
+  let setOne = cardContainer.slice(0, 3);
+  let setTwo = cardContainer.slice(3, 6);
+  let setThree = cardContainer.slice(6, 9);
+  let setFour = cardContainer.slice(9, 12)
+
+  for (let i of setOne) {
+      var element = document.getElementById("game-row");
+      element.appendChild(i);
   }
 
-}
-  /* Click cards to reveal words */
-function cardClicked(event) {
-  this.style.background = "var(--dk-green)";
-  this.firstChild.classList.remove("hidden");
+  for (let i of setTwo) {
+    var element = document.getElementById("game-row2");
+    element.appendChild(i);
   }
   
-  let cards = document.getElementsByClassName('cardContainer');
-  let i = 0;
-  for (i = 0; i < cards.length; i++) {
-  cards[i].addEventListener('click', cardClicked);
+  for (let i of setThree) {
+    var element = document.getElementById("game-row3");
+    element.appendChild(i)
   }
+
+  for (let i of setFour) {
+    var element = document.getElementById("game-row4");
+    element.appendChild(i)
+  }
+}
+    /* Click cards to reveal words */
+    function cardClicked(event) {
+      this.style.background = "var(--dk-green)";
+      this.firstChild.classList.remove("hidden");
+      }
+      
+      let cards = document.getElementsByClassName('card');
+      let i = 0;
+      for (i = 0; i < card.length; i++) {
+      card[i].addEventListener('click', cardClicked);
+      }
 
