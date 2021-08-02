@@ -98,7 +98,8 @@ var wordBank = [
   'welsh': 'Llyfrgell'},
 ];
 
-const cardContainer = [];
+const card = [];
+
 /* global welsh and english variables */ 
 var welsh = [];
 var english = [];
@@ -115,7 +116,6 @@ var x = document.getElementById("btn-play");
   x.style.display = "none";   
 
 /* Generate random set of six word pairs*/
-  const shuffle = (wordBank) 
     let oldElement;
     for (let i = wordBank.length - 1; i > 0; i--) {
       let rand = Math.floor(Math.random() * (i + 1));
@@ -125,18 +125,46 @@ var x = document.getElementById("btn-play");
       var wordBankShuffle = wordBank.slice(0, 6);
     }
     console.log(wordBankShuffle)
+
+    /* create card for each welsh/english word*/ 
     for (i = 0; i < wordBankShuffle.length; i++) {
-      let engCard = document.createElement('div');
+      var engCard = document.createElement('div');
       engCard.dataset.index = i;
       engCard.setAttribute('class', 'card');
       engCard.innerHTML = wordBankShuffle[i].english;
-      console.log(engCard);
+      card.push(engCard);
     }
     for (i = 0; i < wordBankShuffle.length; i++) {
-      let welCard = document.createElement('div');
+      var welCard = document.createElement('div');
       welCard.dataset.index = i;
       welCard.setAttribute('class', 'card');
       welCard.innerHTML = wordBankShuffle[i].welsh;
-      console.log(welCard);
+      card.push(welCard);
     }
+    var i = card.length;
+    if (i == 0) return false;
+    while ( --i ) {
+      var j = Math.floor(Math.random() * ( i + 1 ));
+      var tempi = card[i];
+      var tempj = card[j];
+      card[i] = tempj;
+      card[j] = tempi;
+    }
+  console.log(card);
+
+}
+  /* Click cards to reveal words */
+function cardClicked(event) {
+  this.style.background = "var(--dk-green)";
+  this.firstChild.classList.remove("hidden");
   }
+  
+  let cards = document.getElementsByClassName('card');
+  let i = 0;
+  for (i = 0; i < cards.length; i++) {
+  cards[i].addEventListener('click', cardClicked);
+  }
+
+/*for inserting new cards into dom
+var referenceNode = document.querySelector('#game-row');
+referenceNode.after(engCard); */
