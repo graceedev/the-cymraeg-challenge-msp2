@@ -116,6 +116,9 @@ header {
     background: var(--dk-green) url("../images/daffodils.jpg") no-repeat center center;
     background-size: cover;
     text-align: center;
+    color: var(--off-white);
+    font-weight: bold;
+    font-size: 2.5rem;
 }
 
 .card:hover {
@@ -138,14 +141,8 @@ header {
     }
 }
 
-.card-text {
-    color: var(--off-white);
-    font-weight: bold;
-    font-size: 2.5rem;
-}
-
 @media only screen and (max-width: 700px) {
-    .card-text {
+    .card {
         font-size: 1rem;
         margin-top: 30%;
     }
