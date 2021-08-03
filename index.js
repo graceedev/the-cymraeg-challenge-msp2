@@ -104,11 +104,13 @@ const cardContainer = [];
 var welsh = [];
 var english = [];
 
-function cardClicked(event) {
-  this.style.background = "var(--dk-red)";
-  this.firstChild.classList.remove('hidden');
-}
+var clickedCards = [];
+var dataCompare = [];
 
+function cardClicked(event) {
+  this.firstChild.classList.remove('hidden');
+  this.classList.add('done');
+}
 /* Show text when 'how to play' is clicked */
 function clickHowTo() {
   var x = document.getElementById("how-to-text");
