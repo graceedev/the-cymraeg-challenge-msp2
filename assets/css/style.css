@@ -131,6 +131,7 @@ header {
 .card.done {
     background: var(--dk-red);
     cursor: default;
+    pointer-events: none;
 }
 
 .card:hover.done {
