@@ -106,12 +106,6 @@ var english = [];
 
 /* Start game - reveal cards, remove play button*/
 function changeCards() {
-let cards = Array.from(document.getElementsByClassName('cardContainer'));
-
-for (let i = 0; i < cards.length; i++) {
-  cards[i].classList.remove("hidden");
-}
-
 var x = document.getElementById("btn-play");
   x.style.display = "none";   
 
@@ -124,7 +118,6 @@ var x = document.getElementById("btn-play");
       wordBank[rand] = oldElement;
       var wordBankShuffle = wordBank.slice(0, 6);
     }
-    console.log(wordBankShuffle)
 
     /* create cardContainer for each welsh/english word*/ 
     for (i = 0; i < wordBankShuffle.length; i++) {
@@ -150,7 +143,7 @@ var x = document.getElementById("btn-play");
       cardContainer[i] = tempj;
       cardContainer[j] = tempi;
     }
-    console.log(cardContainer)
+
   /*insert new cards into DOM*/ 
   let setOne = cardContainer.slice(0, 3);
   let setTwo = cardContainer.slice(3, 6);
@@ -158,8 +151,8 @@ var x = document.getElementById("btn-play");
   let setFour = cardContainer.slice(9, 12)
 
   for (let i of setOne) {
-      var element = document.getElementById("game-row");
-      element.appendChild(i);
+    var element = document.getElementById("game-row");
+    element.appendChild(i);
   }
 
   for (let i of setTwo) {
@@ -177,15 +170,3 @@ var x = document.getElementById("btn-play");
     element.appendChild(i)
   }
 }
-    /* Click cards to reveal words */
-    function cardClicked(event) {
-      this.style.background = "var(--dk-green)";
-      this.firstChild.classList.remove("hidden");
-      }
-      
-      let cards = document.getElementsByClassName('card');
-      let i = 0;
-      for (i = 0; i < card.length; i++) {
-      card[i].addEventListener('click', cardClicked);
-      }
-
