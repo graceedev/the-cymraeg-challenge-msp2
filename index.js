@@ -104,6 +104,20 @@ const cardContainer = [];
 var welsh = [];
 var english = [];
 
+function cardClicked(event) {
+  this.style.background = "var(--dk-red)";
+}
+
+/* Show text when 'how to play' is clicked */
+function clickHowTo() {
+  var x = document.getElementById("how-to-text");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
 /* Start game - reveal cards, remove play button*/
 function changeCards() {
 var x = document.getElementById("btn-play");
@@ -169,4 +183,9 @@ var x = document.getElementById("btn-play");
     var element = document.getElementById("game-row4");
     element.appendChild(i)
   }
+    /* Click cards to reveal words */
+    let cards = document.querySelectorAll('.card');
+    for (i = 0; i < cards.length; i++) {
+      cards[i].addEventListener('click', cardClicked);
+    }
 }
