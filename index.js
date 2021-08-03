@@ -110,7 +110,25 @@ var dataCompare = [];
 function cardClicked(event) {
   this.firstChild.classList.remove('hidden');
   this.classList.add('done');
+  dataCompare.push(this.getAttribute('data-index'))
+  clickedCards.push(this);
+  console.log(dataCompare);
+  console.log(clickedCards);
+
+  if (dataCompare.length >= 2) {
+    if (dataCompare[0] !== dataCompare[1]) {
+      console.log('you suck');
+      dataCompare = [];
+      clickedCards = [];
+    } else {
+      console.log('YAY');
+      dataCompare = [];
+      clickedCards = [];
+    }
+  }
 }
+
+
 /* Show text when 'how to play' is clicked */
 function clickHowTo() {
   var x = document.getElementById("how-to-text");
