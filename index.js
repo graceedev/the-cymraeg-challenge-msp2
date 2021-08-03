@@ -106,6 +106,7 @@ var english = [];
 
 function cardClicked(event) {
   this.style.background = "var(--dk-red)";
+  this.firstChild.classList.remove('hidden');
 }
 
 /* Show text when 'how to play' is clicked */
@@ -139,6 +140,9 @@ var x = document.getElementById("btn-play");
       engCard.dataset.index = i;
       engCard.setAttribute('class', 'card');
       engCard.innerHTML = wordBankShuffle[i].english;
+      org_text = engCard.innerHTML;
+      new_html = "<p class='hidden'>" + org_text + "</p>";
+      engCard.innerHTML = new_html;
       cardContainer.push(engCard);
     }
     for (i = 0; i < wordBankShuffle.length; i++) {
@@ -146,6 +150,9 @@ var x = document.getElementById("btn-play");
       welCard.dataset.index = i;
       welCard.setAttribute('class', 'card');
       welCard.innerHTML = wordBankShuffle[i].welsh;
+      org_text = welCard.innerHTML;
+      new_html = "<p class='hidden'>" + org_text + "</p>";
+      welCard.innerHTML = new_html;
       cardContainer.push(welCard);
     }
     var i = cardContainer.length;
