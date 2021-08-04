@@ -79,7 +79,7 @@ var wordBank = [
   {'english': 'Shirt',
   'welsh': 'Crys'},
   {'english': 'Milk',
-  'welsh': 'Llaneth'},
+  'welsh': 'Llaeth'},
   {'english': 'Enjoy',
   'welsh': 'Mwynhau'},
   {'english': 'Like',
@@ -103,6 +103,7 @@ const cardContainer = [];
 /* global welsh and english variables */ 
 var welsh = [];
 var english = [];
+var score = 0;
 
 var clickedCards = [];
 var dataCompare = [];
@@ -127,6 +128,8 @@ function cardClicked(event) {
         clickedCards = [];
     } else {
       console.log('YAY');
+      score += 10;
+      document.getElementById("score").innerHTML = `Score: ${score}`;
       dataCompare = [];
       clickedCards = [];
     }
