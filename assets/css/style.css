@@ -87,20 +87,37 @@ header {
 }
 
 #btn-play {
-    color: var(--dk-green);
-    border: 5px solid var(--mid-green);
-    background-color: var(--off-white);
-    font-size: 3rem;
-    font-weight: 600;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30vh;
+    font-size: 3rem;
+    font-weight: 600;
 }
 
-#btn-play:hover {
+.btn:hover {
     font-size: 3.5rem;
     cursor: pointer;
+}
+
+.btn {
+    color: var(--dk-green);
+    border: 5px solid var(--mid-green);
+    background-color: var(--off-white);
+}
+
+#btn-again {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+#congrats {
+    background-color: var(--off-white);
+    max-width: var(--max-width);
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    border: 5px solid var(--mid-green);
 }
 
 .row {
@@ -137,6 +154,7 @@ header {
 .card:hover.done {
     animation-name: none;
 }
+
 
 .hidden {
     display: none;
