@@ -121,8 +121,6 @@ function cardClicked(event) {
 
   if (allDone.length === 12) {
     document.getElementById('congrats').classList.remove('hidden');
-  } else {
-    return;
   }
 
   if (dataCompare.length >= 2) {
