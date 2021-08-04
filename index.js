@@ -116,6 +116,15 @@ function cardClicked(event) {
   console.log(dataCompare);
   console.log(clickedCards)
 
+  let allDone = document.getElementsByClassName('done');
+  console.log(allDone.length);
+
+  if (allDone.length === 12) {
+    document.getElementById('congrats').classList.remove('hidden');
+  } else {
+    return;
+  }
+
   if (dataCompare.length >= 2) {
     if (dataCompare[0] !== dataCompare[1]) {
       //for (i = 0; i <= clickedCards.length; i++) {

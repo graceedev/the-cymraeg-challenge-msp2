@@ -26,7 +26,8 @@
         </header>
         <div id="game-container">
             <div class="game">
-                <button id="btn-play" class="btn-lg" onclick="changeCards()">Play</button>
+                <button id="btn-play" class="btn" onclick="changeCards()">Play</button>
+                <div id="congrats" class="hidden"><p><b>Congratulations!</b><br><i>Llongyfarchiadau!</i><br>You have completed the challenge!<br></p><button id="btn-again" class="btn" onclick="changeCards()">Play Again?</button></div>
                 <div id="game-row" class="row">
                 </div>
                 <div id="game-row2" class="row">
@@ -38,7 +39,7 @@
             </div>
         </div>
         <footer>
-            <p class="score">Score:</p>
+            <p id="score">Score: 0</p>
         </footer>
     </div>
     <script src="index.js">
