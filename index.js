@@ -333,7 +333,7 @@ var wordBank = [{
 },
 ];
 
-const cardContainer = [];
+
 
 /* global welsh and english variables */
 var score = 0;
@@ -381,7 +381,7 @@ if (x.style.display === "none") {
 /* Start game - reveal cards, remove play button*/
 function changeCards() {
   resetGame();
-
+  const cardContainer = [];
 /* Generate random set of six word pairs*/
 let oldElement;
 for (let i = wordBank.length - 1; i > 0; i--) {
@@ -392,7 +392,7 @@ for (let i = wordBank.length - 1; i > 0; i--) {
   var wordBankShuffle = wordBank.slice(0, 6);
 }
 
-/* create cardContainer for each welsh/english word*/
+/* create cardContainer for welsh/english words*/
 for (i = 0; i < wordBankShuffle.length; i++) {
   var engCard = document.createElement('div');
   engCard.dataset.index = i;
@@ -403,6 +403,7 @@ for (i = 0; i < wordBankShuffle.length; i++) {
   engCard.innerHTML = new_html;
   cardContainer.push(engCard);
 }
+
 for (i = 0; i < wordBankShuffle.length; i++) {
   var welCard = document.createElement('div');
   welCard.dataset.index = i;
@@ -413,6 +414,7 @@ for (i = 0; i < wordBankShuffle.length; i++) {
   welCard.innerHTML = new_html;
   cardContainer.push(welCard);
 }
+
 var i = cardContainer.length;
 if (i == 0) return false;
 while (--i) {
@@ -461,6 +463,7 @@ function resetGame() {
 
   var x = document.getElementById("btn-play");
   x.style.display = "none";
+
 }
 
 /* Remove old cards from previous game */
