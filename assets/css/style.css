@@ -109,8 +109,9 @@ header {
 #btn-again {
     margin-bottom: 10px;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
+
 #congrats {
     background-color: var(--off-white);
     max-width: var(--max-width);
@@ -118,6 +119,10 @@ header {
     margin-right: 5%;
     text-align: center;
     border: 5px solid var(--mid-green);
+}
+table {
+    width: 100%;
+    font-size: smaller;
 }
 
 .row {
@@ -190,6 +195,12 @@ footer {
     background-color: var(--off-white);
     padding-bottom: 3%;
     max-width: var(--max-width);
+}
+
+@media only screen and (max-height: 700px) {
+    footer {
+        height: 9%;
+    }
 }
 
 #score {
