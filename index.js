@@ -336,8 +336,6 @@ var wordBank = [{
 const cardContainer = [];
 
 /* global welsh and english variables */
-var welsh = [];
-var english = [];
 var score = 0;
 
 var clickedCards = [];
@@ -348,28 +346,7 @@ this.firstChild.classList.remove('hidden');
 this.classList.add('done');
 dataCompare.push(this.getAttribute('data-index'))
 clickedCards.push(this);
-console.log(dataCompare);
-console.log(clickedCards)
-
-let allDone = document.getElementsByClassName('done');
-console.log(allDone.length);
-
-if (allDone.length === 12) {
-  document.getElementById('congrats').classList.remove('hidden');
-  let oldCards = document.getElementsByClassName('done');
-  console.log(oldCards);
-  let cardArray = Array.from(oldCards)
-  
-  for (var i = 0; i < cardArray.length; i++) {
-    cardArray[i].remove();
-    console.log(cardArray[i])
-    console.log("removed")
-  }
-  
-  let cardStil = document.getElementsByClassName('done');
-  console.log("cards with done remain: " + cardStil);
-  console.log(oldCards)
-}
+endGame();
 
 if (dataCompare.length >= 2) {
   if (dataCompare[0] !== dataCompare[1]) {
@@ -382,16 +359,11 @@ if (dataCompare.length >= 2) {
           dataCompare = [];
           clickedCards = [];
       }, 500);
-
-
   } else {
-      console.log('YAY');
       score += 10;
       document.getElementById("score").innerHTML = `Score: ${score}`;
-      for (let card of clickedCards) {
-        card.style.backgroundColor = "var(--dk-green)";
         dataCompare = [];
-        clickedCards = [];}
+        clickedCards = [];
   }
 }
 }
@@ -408,10 +380,7 @@ if (x.style.display === "none") {
 
 /* Start game - reveal cards, remove play button*/
 function changeCards() {
-document.getElementById('congrats').classList.add('hidden');
-
-var x = document.getElementById("btn-play");
-x.style.display = "none";
+  resetGame();
 
 /* Generate random set of six word pairs*/
 let oldElement;
@@ -479,23 +448,31 @@ for (let i of setFour) {
   var element = document.getElementById("game-row4");
   element.appendChild(i)
 }
-/* Click cards to reveal words */
+/* Add event listeners to cards */
 let cards = document.querySelectorAll('.card');
 for (i = 0; i < cards.length; i++) {
   cards[i].addEventListener('click', cardClicked);
 }
 }
 
+/*Reset game on Play*/
+function resetGame() {
+  document.getElementById('congrats').classList.add('hidden');
+
+  var x = document.getElementById("btn-play");
+  x.style.display = "none";
+}
+
 /* Remove old cards from previous game */
 function ditchOldCards() {
 
-  console.log('fuck')
-
-  let oldCards = document.getElementsByClassName('done');
-  console.log(oldCards);
-  let cardArray = Array.from(oldCards)
+  let cards = document.getElementsByClassName('card');
+  let cardArray = Array.from(cards);
   
   for (var i = 0; i < cardArray.length; i++) {
+    console.log(cardArray[i].classList);
+    cardArray[i].classList.remove('done');
+    cardArray[i].firstChild.classList.add('hidden');
     cardArray[i].remove();
     console.log(cardArray[i])
     console.log("removed")
@@ -503,9 +480,16 @@ function ditchOldCards() {
 
   let cardStil = document.getElementsByClassName('done');
   console.log("cards with done remain: " + cardStil);
-  console.log(oldCards)
 
-  document.getElementById('congrats').classList.add('hidden');
+}
 
- 
+/* Show congratulation message at game end */
+function endGame(){
+  let allDone = document.getElementsByClassName('done');
+console.log(allDone.length);
+
+if (allDone.length === 12) {
+  document.getElementById('congrats').classList.remove('hidden');
+  ditchOldCards();
+  }
 }
