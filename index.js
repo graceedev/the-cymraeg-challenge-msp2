@@ -344,51 +344,57 @@ var clickedCards = [];
 var dataCompare = [];
 
 function cardClicked(event) {
-  this.firstChild.classList.remove('hidden');
-  this.classList.add('done');
-  dataCompare.push(this.getAttribute('data-index'))
-  clickedCards.push(this);
-  console.log(dataCompare);
-  console.log(clickedCards)
+this.firstChild.classList.remove('hidden');
+this.classList.add('done');
+dataCompare.push(this.getAttribute('data-index'))
+clickedCards.push(this);
+console.log(dataCompare);
+console.log(clickedCards)
+
+let allDone = document.getElementsByClassName('done');
+console.log(allDone.length);
+
+if (allDone.length === 12) {
+  document.getElementById('congrats').classList.remove('hidden');
+  let oldCards = document.getElementsByClassName('done');
+  console.log(oldCards);
+  let cardArray = Array.from(oldCards)
   
-  let allDone = document.getElementsByClassName('done');
-  console.log(allDone.length);
-  
-  if (allDone.length === 12) {
-    document.getElementById('congrats').classList.remove('hidden');
+  for (var i = 0; i < cardArray.length; i++) {
+    cardArray[i].remove();
+    console.log(cardArray[i])
+    console.log("removed")
   }
   
-  if (dataCompare.length >= 2) {
-    if (dataCompare[0] !== dataCompare[1]) {
-        //for (i = 0; i <= clickedCards.length; i++) {
-        //console.log(clickedCards[i].typeof);
-        //clickedCards[i].classList.remove('done');}
-        //clickedCards[i].firstChild.classList.add('hidden');
-        //setTimeout(() => {doneCards[i].classList.remove('done')}, 500);
-        console.log('NAAAH');
-        console.log('****');
-        console.log(clickedCards);
-        setTimeout(function () {
-            for (let card of clickedCards) {
-                card.classList.remove('done');
-                card.firstElementChild.classList.add('hidden');
-            }   
-            dataCompare = [];
-            clickedCards = [];
-        }, 500);
-  
-  
-    } else {
-        console.log('YAY');
-        score += 10;
-        document.getElementById("score").innerHTML = `Score: ${score}`;
-        for (let card of clickedCards) {
-          card.style.backgroundColor = "var(--dk-green)";
+  let cardStil = document.getElementsByClassName('done');
+  console.log("cards with done remain: " + cardStil);
+  console.log(oldCards)
+}
+
+if (dataCompare.length >= 2) {
+  if (dataCompare[0] !== dataCompare[1]) {
+      console.log(clickedCards);
+      setTimeout(function () {
+          for (let card of clickedCards) {
+              card.classList.remove('done');
+              card.firstElementChild.classList.add('hidden');
+          }   
           dataCompare = [];
-          clickedCards = [];}
-    }
+          clickedCards = [];
+      }, 500);
+
+
+  } else {
+      console.log('YAY');
+      score += 10;
+      document.getElementById("score").innerHTML = `Score: ${score}`;
+      for (let card of clickedCards) {
+        card.style.backgroundColor = "var(--dk-green)";
+        dataCompare = [];
+        clickedCards = [];}
   }
-  }
+}
+}
 
 /* Show text when 'how to play' is clicked */
 function clickHowTo() {
@@ -402,6 +408,8 @@ if (x.style.display === "none") {
 
 /* Start game - reveal cards, remove play button*/
 function changeCards() {
+document.getElementById('congrats').classList.add('hidden');
+
 var x = document.getElementById("btn-play");
 x.style.display = "none";
 
@@ -476,4 +484,28 @@ let cards = document.querySelectorAll('.card');
 for (i = 0; i < cards.length; i++) {
   cards[i].addEventListener('click', cardClicked);
 }
+}
+
+/* Remove old cards from previous game */
+function ditchOldCards() {
+
+  console.log('fuck')
+
+  let oldCards = document.getElementsByClassName('done');
+  console.log(oldCards);
+  let cardArray = Array.from(oldCards)
+  
+  for (var i = 0; i < cardArray.length; i++) {
+    cardArray[i].remove();
+    console.log(cardArray[i])
+    console.log("removed")
+  }
+
+  let cardStil = document.getElementsByClassName('done');
+  console.log("cards with done remain: " + cardStil);
+  console.log(oldCards)
+
+  document.getElementById('congrats').classList.add('hidden');
+
+ 
 }

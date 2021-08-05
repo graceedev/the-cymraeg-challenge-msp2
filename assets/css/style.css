@@ -171,8 +171,11 @@ header {
 
 @media only screen and (max-width: 700px) {
     .card {
-        font-size: 1rem;
+        font-size: 0.75rem;
         margin-top: 0.5rem;
+    }
+    .card p {
+        margin-top: 1.75rem;
     }
 }
 
