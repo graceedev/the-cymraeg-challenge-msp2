@@ -24,6 +24,38 @@ var wordBank = [{
   'welsh': 'Nos'
 },
 {
+  'english': 'Today',
+  'welsh': 'Heddiw'
+},
+{
+  'english': 'Tomorrow',
+  'welsh': 'Yfory'
+},
+{
+  'english': 'Yesterday',
+  'welsh': 'Ddoe'
+},
+{
+  'english': 'Tonight',
+  'welsh': 'Heno'
+},
+{
+  'english': 'Week',
+  'welsh': 'Wythnos'
+},
+{
+  'english': 'Weekend',
+  'welsh': 'Penwythnos'
+},
+{
+  'english': 'Now',
+  'welsh': 'Nawr'
+},
+{
+  'english': 'Going',
+  'welsh': 'Mynd'
+},
+{
   'english': 'Welsh',
   'welsh': 'Cymraeg'
 },
@@ -54,6 +86,10 @@ var wordBank = [{
 {
   'english': 'Sausage',
   'welsh': 'Selsig'
+},
+{
+  'english': 'Meat',
+  'welsh': 'Cig'
 },
 {
   'english': 'Goodbye',
@@ -96,8 +132,40 @@ var wordBank = [{
   'welsh': 'Cath'
 },
 {
+  'english': 'Sheep',
+  'welsh': 'Dafad'
+},
+{
+  'english': 'Mouse',
+  'welsh': 'Llygoden'
+},
+{
+  'english': 'Cow',
+  'welsh': 'Buwch'
+},
+{
+  'english': 'Whale',
+  'welsh': 'Morfil'
+},
+{
+  'english': 'Crab',
+  'welsh': 'Cranc'
+},
+{
+  'english': 'Turtle',
+  'welsh': 'Crwban'
+},
+{
   'english': 'Egg',
   'welsh': 'Wy'
+},
+{
+  'english': 'Phone',
+  'welsh': 'Ffôn'
+},
+{
+  'english': 'Surprise',
+  'welsh': 'Syndod'
 },
 {
   'english': 'Microwave',
@@ -126,6 +194,22 @@ var wordBank = [{
 {
   'english': 'Swimming',
   'welsh': 'Nofio'
+},
+{
+  'english': 'Learn',
+  'welsh': 'Dysgu'
+},
+{
+  'english': 'Sleep',
+  'welsh': 'Cysgu'
+},
+{
+  'english': 'Dancing',
+  'welsh': 'Dawnsio'
+},
+{
+  'english': 'Speak',
+  'welsh': 'Siarad'
 },
 {
   'english': 'Yes',
@@ -188,8 +272,64 @@ var wordBank = [{
   'welsh': 'Pump'
 },
 {
+  'english': 'Six',
+  'welsh': 'Chwech'
+},
+{
+  'english': 'Seven',
+  'welsh': 'Saith'
+},
+{
+  'english': 'Eight',
+  'welsh': 'Wyth'
+},
+{
+  'english': 'Nine',
+  'welsh': 'Naw'
+},
+{
+  'english': 'Ten',
+  'welsh': 'Deg'
+},
+{
+  'english': 'Here',
+  'welsh': 'Yma'
+},
+{
+  'english': 'There',
+  'welsh': 'Yno'
+},
+{
+  'english': 'Near',
+  'welsh': 'Ger'
+},
+{
   'english': 'Library',
   'welsh': 'Llyfrgell'
+},
+{
+  'english': 'Hospital',
+  'welsh': 'Ysbyty'
+},
+{
+  'english': 'School',
+  'welsh': 'Ysgol'
+},
+{
+  'english': 'House',
+  'welsh': 'Tŷ'
+},
+{
+  'english': 'Doctor',
+  'welsh': 'Meddyg'
+},
+{
+  'english': 'Teacher',
+  'welsh': 'Athro'
+},
+{
+  'english': 'Police',
+  'welsh': 'Heddlu'
 },
 ];
 
@@ -204,52 +344,51 @@ var clickedCards = [];
 var dataCompare = [];
 
 function cardClicked(event) {
-this.firstChild.classList.remove('hidden');
-this.classList.add('done');
-dataCompare.push(this.getAttribute('data-index'))
-clickedCards.push(this);
-console.log(dataCompare);
-console.log(clickedCards)
-
-let allDone = document.getElementsByClassName('done');
-console.log(allDone.length);
-
-if (allDone.length === 12) {
-  document.getElementById('congrats').classList.remove('hidden');
-}
-
-if (dataCompare.length >= 2) {
-  if (dataCompare[0] !== dataCompare[1]) {
-      //for (i = 0; i <= clickedCards.length; i++) {
-      //console.log(clickedCards[i].typeof);
-      //clickedCards[i].classList.remove('done');}
-      //clickedCards[i].firstChild.classList.add('hidden');
-      //setTimeout(() => {doneCards[i].classList.remove('done')}, 500);
-      console.log('NAAAH');
-      console.log('****');
-      console.log(clickedCards);
-      setTimeout(function () {
-          for (let card of clickedCards) {
-              card.classList.remove('done');
-              card.firstElementChild.classList.add('hidden');
-              console.log('HIYA');
-              console.log(card.firstElementChild);
-              console.log('---')
-          }   
-          dataCompare = [];
-          clickedCards = [];
-      }, 500);
-
-
-  } else {
-      console.log('YAY');
-      score += 10;
-      document.getElementById("score").innerHTML = `Score: ${score}`;
-      dataCompare = [];
-      clickedCards = [];
+  this.firstChild.classList.remove('hidden');
+  this.classList.add('done');
+  dataCompare.push(this.getAttribute('data-index'))
+  clickedCards.push(this);
+  console.log(dataCompare);
+  console.log(clickedCards)
+  
+  let allDone = document.getElementsByClassName('done');
+  console.log(allDone.length);
+  
+  if (allDone.length === 12) {
+    document.getElementById('congrats').classList.remove('hidden');
   }
-}
-}
+  
+  if (dataCompare.length >= 2) {
+    if (dataCompare[0] !== dataCompare[1]) {
+        //for (i = 0; i <= clickedCards.length; i++) {
+        //console.log(clickedCards[i].typeof);
+        //clickedCards[i].classList.remove('done');}
+        //clickedCards[i].firstChild.classList.add('hidden');
+        //setTimeout(() => {doneCards[i].classList.remove('done')}, 500);
+        console.log('NAAAH');
+        console.log('****');
+        console.log(clickedCards);
+        setTimeout(function () {
+            for (let card of clickedCards) {
+                card.classList.remove('done');
+                card.firstElementChild.classList.add('hidden');
+            }   
+            dataCompare = [];
+            clickedCards = [];
+        }, 500);
+  
+  
+    } else {
+        console.log('YAY');
+        score += 10;
+        document.getElementById("score").innerHTML = `Score: ${score}`;
+        for (let card of clickedCards) {
+          card.style.backgroundColor = "var(--dk-green)";
+          dataCompare = [];
+          clickedCards = [];}
+    }
+  }
+  }
 
 /* Show text when 'how to play' is clicked */
 function clickHowTo() {
