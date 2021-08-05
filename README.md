@@ -7,6 +7,7 @@ In the header, there will be a ‘how to play’ link under the title. When clic
 Reasons a user might visit the website:
 * Users who are learning Welsh and want to consolidate their skills
 * Users who want a fun game to kill some time
+
 Reasons for the website:
 * Teach basic Welsh vocabulary
 * Provide a resource for Welsh learners to revise their skills
@@ -95,6 +96,7 @@ In the future this game could be expanded to add more Welsh words. It could also
 
 ### Validator Results
 
+Code was run through HTML and CSS validators. There were no errors found on either. Please see html.validate.png and css.validate.png for screenshots.
 
 ### Usability Testing
 This website has been tested on screen sizes ranging from 320px to 5000px using developer tools. 
@@ -103,12 +105,32 @@ This website has been tested on screen sizes ranging from 320px to 5000px using 
 | --------------- |:------------------:| ----------------:|--------------|
 |Smaller Sizes    |Reduce screensize on devtools|Cards are reduced in size to fit screen| PASS
 |                 |                             |Text resizes and continues to fit within cards| PASS
+|                 |                             |Score remains visible below game area| PASS
 |Larger Sizes     |Expand screensize on devtools|Cards expand to suit screen size to a cut off point| PASS
 |                 |                             |Game/navbar elements/score remains central beyond max-width| PASS
-|How-To text      |Click while cards are visible| Text appears ontop of card elements| PASS
+|                 |                             |Score does not block bottom of game area| PASS
+|How-To Text      |Click while cards are visible| Text appears ontop of card elements| PASS
+|                 |Click while play button is visible| Text does not block play button| PASS
+|                 |Click while congrats text is visible|Text remains readable, overlaying congrats text| PASS
+|Buttons          |Click play button   | Cards are generated in their unclicked state| PASS
+|                 |Click play again button| A new set of cards/words are generated| PASS
 |Animations       |Hover over cards    | Cards should grow on hover BEFORE being clicked| PASS
 |                 |                    | Cards should not grow on hover AFTER being clicked| PASS
+|                 |Hover over clickable elements| Cursor changes to pointer, indicating clickability| PASS
 |Cards            |Click the same card more than once| Does not allow multiple clicks/submission of data-index value| PASS
+|                 |Reset game by pressing Play Again button| All cards from previous game are gone and replaced with new cards and new words| PASS
+|                 |Make a correct guess| Cards turn green and their words remain visible| PASS
+|                 |                    | Score increases by 10| PASS
+|                 |                    | Previous 'correct guesses' remain visible| PASS
+|                 |                    | When all cards have been matched, the cards dissappear and congratulations text appears| PASS
+|                 |Make an incorrect guess| Cards are revealed for half a second and then their words/backgrounds return to their pre-click state| PASS
+|                 |                       | Previous 'correct guesses' remain visible| PASS
+|Congrats text    |Play game, win, then press Play Again and win| Translation table appears with words covered in the previous game| PASS
+|                 |Play game, win then press Play Again |Congrats text and children disappear| PASS
+|Score            |Play game, win, then press Play Again| Score carries over to next game| PASS
+|                 |Make incorrect guess| Score does not increase| PASS
+
+
 
 To ensure that the words remain appropriately sized within cards, a media query was used to target very small screen sizes to make the font smaller. 
 On screens bigger than 1500px, the max-width of the main page elemets, the website is still functional and no elements stretch or warp. Text remains clear on very small to very large sizes.
@@ -120,13 +142,22 @@ On screens bigger than 1500px, the max-width of the main page elemets, the websi
 
 ### Performance Testing
 
-### User Stories
-* Users who are learning Welsh and want to consolidate their skills
-Incidental Welsh words used in the how-to text are provided in italics as expected for translations into a language, while the English version is in bold above. The game provides visual cues as to whether your guess is correct or incorrect. If it is incorrect, the card will return to its pre-click state. If it is correct, the card will dissapear and the score will increase. If all the cards have dissapeared, the game will end and a congratulations message will appear. 
+Please see lighthouse-mob.png for evidence of Lighthouse Testing. The website scored the following: Performance = 100, Accessibility = 100, Best Practices = 93, SEO = 91.
 
-* Users who want a fun game to kill some time
-The play button is located in a central eye-catching position on the page to start the game immediately. A 'how to play' button is located on the top right of the page and is available at any time. When clicked it provides information as to how to play the game, which is clear and concise. The game has reactive elements, such as the cards expanding on hover and the background of the cards changing when clicked on to provide visual interest. There is a score at the bottom to reward the user with correct guesses.
+### User Stories
+#### Users who are learning Welsh and want to consolidate their skills
+Incidental Welsh words used in the how-to text are provided in italics as expected for translations into a language, while the English version is in bold above. The game provides visual cues as to whether your guess is correct or incorrect. If it is incorrect, the card will return to its pre-click state. If it is correct, the card will turn green, remain on screen and the score will increase. If all the cards have dissapeared,
+the game will end and a congratulations message will appear.
+The congratulations message also contains incidental welsh with translation. There is a translation table below with the words covered in the previous game so learners can consolidate their skills. Learners are then prompted to play again, with a new set of words. A running score at the bottom of the page shows the accumulated score over multiple games, so learners can set their own goals to earn as many points as possible.
+
+
+#### Users who want a fun game to kill some time
+The play button is located in a central eye-catching position on the page to start the game immediately. A 'how to play' button is located on the top right of the page and is available at any time. When clicked it provides information as to how to play the game, which is clear and concise. The game has reactive elements, such as the cards expanding on hover and the background of the cards changing when clicked on to provide visual interest. There is a score at the bottom to reward the user with correct guesses
+and playing multiple games. The game ends with a congratulations message which also provides a button to start a new game with a new set of words. Cards are always in a random order.
 
 ### Deployment
 
 ### Credits
+
+Thank you to my mentor Brian for his continued support during this course. 
+Thank you to John the tutor for his input and patience during this project. 

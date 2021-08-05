@@ -93,16 +93,16 @@ header {
     margin-top: 30vh;
     font-size: 3rem;
     font-weight: 600;
+    padding: 15px;
 }
 
 .btn:hover {
-    font-size: 3.5rem;
     cursor: pointer;
 }
 
 .btn {
     color: var(--dk-green);
-    border: 5px solid var(--mid-green);
+    border: 2.5px solid var(--mid-green);
     background-color: var(--off-white);
 }
 
@@ -120,6 +120,7 @@ header {
     text-align: center;
     border: 5px solid var(--mid-green);
 }
+
 table {
     width: 100%;
     font-size: smaller;
