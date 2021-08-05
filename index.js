@@ -341,6 +341,9 @@ var score = 0;
 var clickedCards = [];
 var dataCompare = [];
 
+var welsh = [];
+var english = [];
+
 function cardClicked(event) {
 this.firstChild.classList.remove('hidden');
 this.classList.add('done');
@@ -362,8 +365,12 @@ if (dataCompare.length >= 2) {
   } else {
       score += 10;
       document.getElementById("score").innerHTML = `Score: ${score}`;
-        dataCompare = [];
-        clickedCards = [];
+      
+      for (let card of clickedCards) {
+        card.style.backgroundColor = "var(--dk-green)";
+      }
+      dataCompare = [];
+      clickedCards = [];
   }
 }
 }
@@ -382,6 +389,7 @@ if (x.style.display === "none") {
 function changeCards() {
   resetGame();
   const cardContainer = [];
+
 /* Generate random set of six word pairs*/
 let oldElement;
 for (let i = wordBank.length - 1; i > 0; i--) {
@@ -398,6 +406,7 @@ for (i = 0; i < wordBankShuffle.length; i++) {
   engCard.dataset.index = i;
   engCard.setAttribute('class', 'card');
   engCard.innerHTML = wordBankShuffle[i].english;
+  english.push(wordBankShuffle[i].english);
   org_text = engCard.innerHTML;
   new_html = "<p class='hidden'>" + org_text + "</p>";
   engCard.innerHTML = new_html;
@@ -409,6 +418,7 @@ for (i = 0; i < wordBankShuffle.length; i++) {
   welCard.dataset.index = i;
   welCard.setAttribute('class', 'card');
   welCard.innerHTML = wordBankShuffle[i].welsh;
+  welsh.push(wordBankShuffle[i].welsh);
   org_text = welCard.innerHTML;
   new_html = "<p class='hidden'>" + org_text + "</p>";
   welCard.innerHTML = new_html;
@@ -457,12 +467,30 @@ for (i = 0; i < cards.length; i++) {
 }
 }
 
+/* Put words into translation table*/
+function translate() {
+  let tableEntryEng = document.getElementsByClassName('english');
+  let tableEntryWel = document.getElementsByClassName('welsh');
+  
+  for (i = 0; i < tableEntryEng.length; i++) {
+    tableEntryEng[i].innerHTML = english[i];
+  }
+
+  for (i = 0; i < tableEntryWel.length; i++) {
+    tableEntryWel[i].innerHTML = welsh[i];
+  }
+
+}
+
 /*Reset game on Play*/
 function resetGame() {
   document.getElementById('congrats').classList.add('hidden');
 
   var x = document.getElementById("btn-play");
   x.style.display = "none";
+
+  english = [];
+  welsh = [];
 
 }
 
@@ -489,10 +517,11 @@ function ditchOldCards() {
 /* Show congratulation message at game end */
 function endGame(){
   let allDone = document.getElementsByClassName('done');
-console.log(allDone.length);
 
 if (allDone.length === 12) {
   document.getElementById('congrats').classList.remove('hidden');
   ditchOldCards();
+  translate();
   }
+
 }
