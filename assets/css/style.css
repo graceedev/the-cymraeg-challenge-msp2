@@ -70,7 +70,7 @@ header {
     border-radius: 25px;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
     .title {
         font-size: 1rem;
     }
@@ -104,6 +104,12 @@ header {
 .game {
     padding-top: 50px;
     height: 90vh;
+}
+
+@media only screen and (min-height: 700px) {
+    .game {
+        padding-top: 75px;
+    }
 }
 
 #btn-play {
