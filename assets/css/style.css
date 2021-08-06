@@ -27,7 +27,7 @@ nav {
     margin-right: auto;
     max-width: var(--max-width);
 }
-    
+
 /*header*/
 header {
     color: var(--mid-red);
@@ -74,6 +74,7 @@ header {
     .title {
         font-size: 1rem;
     }
+
     #how-to {
         font-size: x-small;
         margin-top: 10px;
@@ -187,10 +188,11 @@ table {
 }
 
 @keyframes hover-zoom {
-    from{
+    from {
         transform: scale(1);
     }
-    to{
+
+    to {
         transform: scale(1.1);
     }
 }
@@ -200,6 +202,7 @@ table {
         font-size: 0.75rem;
         margin-top: 0.5rem;
     }
+
     .card p {
         margin-top: 1.75rem;
     }
