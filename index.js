@@ -354,7 +354,6 @@ endGame();
 if (dataCompare.length >= 2) {
   stopClickCards();
   if (dataCompare[0] !== dataCompare[1]) {
-      console.log(clickedCards);
       setTimeout(function () {
           for (let card of clickedCards) {
               card.classList.remove('done');
@@ -523,12 +522,7 @@ function ditchOldCards() {
     cardArray[i].firstChild.classList.add('hidden');
     cardArray[i].remove();
     console.log(cardArray[i])
-    console.log("removed")
   }
-
-  let cardStil = document.getElementsByClassName('done');
-  console.log("cards with done remain: " + cardStil);
-
 }
 
 /* Show congratulation message at game end */
