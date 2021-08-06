@@ -69,7 +69,8 @@ header {
     margin-left: 5%;
     margin-right: 5%;
     text-align: center;
-    border: 5px solid var(--mid-green)
+    border: 5px solid var(--mid-green);
+    color: var(--dk-green);
 }
 
 /*main game section*/
@@ -104,6 +105,7 @@ header {
     color: var(--dk-green);
     border: 2.5px solid var(--mid-green);
     background-color: var(--off-white);
+    border-radius: 25px;
 }
 
 #btn-again {

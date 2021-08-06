@@ -344,7 +344,7 @@ var dataCompare = [];
 var welsh = [];
 var english = [];
 
-function cardClicked(event) {
+function cardClicked(_event) {
 this.firstChild.classList.remove('hidden');
 this.classList.add('done');
 dataCompare.push(this.getAttribute('data-index'))
@@ -352,19 +352,22 @@ clickedCards.push(this);
 endGame();
 
 if (dataCompare.length >= 2) {
+  stopClickCards();
   if (dataCompare[0] !== dataCompare[1]) {
       console.log(clickedCards);
       setTimeout(function () {
           for (let card of clickedCards) {
               card.classList.remove('done');
               card.firstElementChild.classList.add('hidden');
+              clickCards()
           }   
           dataCompare = [];
           clickedCards = [];
-      }, 500);
+      }, 250);
   } else {
       score += 10;
       document.getElementById("score").innerHTML = `Score: ${score}`;
+      clickCards();
       
       for (let card of clickedCards) {
         card.style.backgroundColor = "var(--dk-green)";
@@ -460,11 +463,25 @@ for (let i of setFour) {
   var element = document.getElementById("game-row4");
   element.appendChild(i)
 }
-/* Add event listeners to cards */
-let cards = document.querySelectorAll('.card');
-for (i = 0; i < cards.length; i++) {
-  cards[i].addEventListener('click', cardClicked);
+
+clickCards();
 }
+
+/* Add event listeners to cards for click */
+function clickCards() {
+  let cards = document.querySelectorAll('.card');
+  for (i = 0; i < cards.length; i++) {
+    cards[i].addEventListener('click', cardClicked);
+  }
+}
+
+/* Remove event listeners to cards to prevent more than 2 incorrect cards to be open at once*/ 
+
+function stopClickCards() {
+  let cards = document.querySelectorAll('.card');
+  for (i = 0; i < cards.length; i++) {
+    cards[i].removeEventListener('click', cardClicked);
+  }
 }
 
 /* Put words into translation table*/
