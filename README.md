@@ -86,6 +86,7 @@ In the future this game could be expanded to add more Welsh words. It could also
 * Google fonts
 * Balsamiq wireframe
 * Tiny PNG
+* Beautifier
 
 #### Testing
 * HTML Validator
@@ -96,10 +97,14 @@ In the future this game could be expanded to add more Welsh words. It could also
 
 ### Validator Results
 
-Code was run through HTML and CSS validators. There were no errors found on either. Please see html.validate.png and css.validate.png for screenshots.
+Code was run through HTML, CSS and JSHint validators. There were no errors found on either the HTML and CSS validators. Please see html.validate.png and css.validate.png for screenshots.
+The JSHint flagged no major errors.
 
 ### Usability Testing
 This website has been tested on screen sizes ranging from 320px to 5000px using developer tools. 
+
+When deployed, the website was tested on various OS and devices (detailed in subsequent sections).
+
 
 | Test Label      | Test Action        | Expected Outcome | Test Outcome |
 | --------------- |:------------------:| ----------------:|--------------|
@@ -137,8 +142,15 @@ On screens bigger than 1500px, the max-width of the main page elemets, the websi
 
 ### Browser Compatibility
 
+The website has been tested on chrome, internet explorer safari and firefox. Apart from some differences in styling, the website works consistently across platforms. Safari does not load the background image of the cards
+so reverts to the backup colour, meaning the text remains visible.
+When using Internet Explorer the landing screen loads, but the colour scheme does not and the buttons do not work.
+This is due to Internet Explorer not being compatible with some of the latest JavaScript and CSS releases.
+As very few people use Internet Explorer nowadays, this is considered negligable.
+
 ### OS Compatibiility
 
+The website has been tested on iOS and android. Apart from similar issues with the iOS to safari, the game is playable on both.
 
 ### Performance Testing
 
@@ -155,9 +167,61 @@ The congratulations message also contains incidental welsh with translation. The
 The play button is located in a central eye-catching position on the page to start the game immediately. A 'how to play' button is located on the top right of the page and is available at any time. When clicked it provides information as to how to play the game, which is clear and concise. The game has reactive elements, such as the cards expanding on hover and the background of the cards changing when clicked on to provide visual interest. There is a score at the bottom to reward the user with correct guesses
 and playing multiple games. The game ends with a congratulations message which also provides a button to start a new game with a new set of words. Cards are always in a random order.
 
+#### A user may want
+A congratulation message to notify you when you have won the game
+Congratulation message shows when all cards are matched. Contains a button to play again. Also contains a translation table to recap what has been covered in the game.
+
+A running score during the game
+The score is always visible at the bottom of the screen. Score carries over between games as this allows users to keep some kind of track on how many times they have played.
+
+#### As a developer/business I expect
+An engaging interactive game which makes users want to play again 
+Game contains many interactive elements such as clickable cards, a how to button which reveals text and cards that change colour/background on clicks. It is quick and easy to play. Users are prompted to play again immediately after finishing a game.
+
+A responsive website that attracts users
+Game is responsively sized and works across a variety of platforms. It has a minimalist design which focuses on the game being entertaining enough to want to play over and over. 
+The colour scheme and imagery are consistent through out and suit each other well.
+
 ### Deployment
+#### Deploying via GitHub Pages
+This website is hosted by GitHub Pages. This was acheived by navigating to the repository in question, clicking the settings button, then selecting the Pages section.
+From here, the master branch was selected for deployment. Deployment may take some time to complete, but once ready GitHub provides a link to the website. At any time, 
+you can change who can access the website you have created. For this project, this page is public. 
+
+#### Adding and Committing 
+First step is opening the repository and clicking the green Gitpod button. This will then show you the coding interface. 
+From here you can create new files (by right clicking on the left column showing the files) and selecting New File. You can also check
+whether a file is untracked or modified, as they will appear with either an U or M next to the file name. 
+To add a file to the repository, type 'git add' followed by the file name into the terminal. This will prep the file for the commit.
+To commit the file, type 'git commit -m' followed by details of your commit wrapped in quotation marks. Make sure these details are explicit, as
+they will allow you or others to identify what has been changed in each commit. 
+To push the files you have just commited to the repository, type 'git push' into the terminal.
+
+#### Cloning
+You can clone a repository to have a local copy on your computer which you can then sync between the two locations.
+The following instructions are for cloning a repository on github.com rather than the desktop app.
+First you must go to the main page of the repository you wish to clone. There should be a green code button above the list of files.
+Here you will have the choice to clone from HTTPS or SSH key.To clone from HTTPS, just paste the address into the box provided.
+Next, open Git Bash and change your current working directory to wherever you want the new cloned directory to appear. Type 'git clone' followed by the URL you copied and pasted earlier into the terminal, then press enter to begin the clone.
+
+#### Forking
+To create a copy of a repository, you can fork it! This allows you to experiment without altering the original.
+Creating a fork is as simple as a navigating to the main page of a repository, and clicking the 'Fork' button (next to the Star and Watch buttons).
+
+### Bugs
+FIX cards were not shuffling correctly after first game. By moving the empty cardContainer variable and producing a new function that wipes all the classes from
+the cards before the next game, this was fixed.
+FIX issue where words that did not match disappeared instantly. This was fixed with a timeout which allows 250 milliseconds before readding the hidden class.
+FIX issue where clickedCards and dataCompare were not emptying when greater than 2 in length. This was fixed with emptying the array after comparing the values within.
+FIX cards could be clicked when two incorrect cards were visible. A new function removing the event handler from cards when more than one incorrect card is open was added.
+BUG website does not work on Internet Explorer (see previous sections for more details).
 
 ### Credits
 
 Thank you to my mentor Brian for his continued support during this course. 
 Thank you to John the tutor for his input and patience during this project. 
+
+#### Inspiration and Planning
+All code is my own unless otherwise stated.
+Live Coding A Memory Game: HTML, CSS, Javascript - https://www.youtube.com/watch?v=bbb9dZotsOc
+Flip - card memory game - https://codepen.io/zerospree/pen/bNWbvW

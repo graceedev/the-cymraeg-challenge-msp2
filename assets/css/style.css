@@ -163,7 +163,7 @@ table {
     width: 30%;
     height: 15vh;
     margin: 1%;
-    background: var(--dk-green) url("../images/daffodils.jpg") no-repeat center center;
+    background: var(--dk-red) url("../images/daffodils.jpg") no-repeat center center;
     background-size: cover;
     text-align: center;
     color: var(--off-white);
