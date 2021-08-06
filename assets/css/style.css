@@ -6,7 +6,7 @@
     --mid-red: #D30731;
     --dk-red: #630316;
     --mid-green: #00A334;
-    --dk-green: #00290D;
+    --dk-green: #00290d;
     --max-width: 1500px;
 }
 
@@ -47,7 +47,7 @@ header {
 }
 
 .title {
-    font-size: 1.15rem;
+    font-size: 1.80rem;
     font-weight: bold;
     margin-left: 5%;
 }
@@ -55,11 +55,29 @@ header {
 #how-to {
     font-size: small;
     margin-right: 5%;
+    border: none;
+    background-color: var(--off-white);
+    color: var(--dk-red);
+    height: 25px;
+    margin-top: 30px;
 }
 
 #how-to:hover {
-    text-decoration: underline;
     cursor: pointer;
+    font-weight: bold;
+    background-color: var(--dk-red);
+    color: var(--off-white);
+    border-radius: 25px;
+}
+
+@media only screen and (max-width: 400px) {
+    .title {
+        font-size: 1rem;
+    }
+    #how-to {
+        font-size: x-small;
+        margin-top: 10px;
+    }
 }
 
 #how-to-text {
@@ -211,6 +229,3 @@ footer {
     font-weight: bold;
     font-size: 1.5rem;
 }
-
-
-
