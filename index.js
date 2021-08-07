@@ -8,6 +8,34 @@ var wordBank = [{
   'welsh': 'Cwrw'
 },
 {
+  'english': 'Leeks',
+  'welsh': 'Cennin'
+},
+{
+  'english': 'Peas',
+  'welsh': 'Pys'
+},
+{
+  'english': 'TV',
+  'welsh': 'Teledu'
+},
+{
+  'english': 'Desk',
+  'welsh': 'Desg'
+},
+{
+  'english': 'Either',
+  'welsh': 'Chwaith'
+},
+{
+  'english': 'Want',
+  'welsh': 'Eisiau'
+},
+{
+  'english': 'Enjoy',
+  'welsh': 'Mwynhau'
+},
+{
   'english': 'Good',
   'welsh': 'Da'
 },
@@ -66,6 +94,10 @@ var wordBank = [{
 {
   'english': 'Thanks',
   'welsh': 'Diolch'
+},
+{
+  'english': 'But',
+  'welsh': 'Ond'
 },
 {
   'english': 'Name',
@@ -156,6 +188,10 @@ var wordBank = [{
   'welsh': 'Crwban'
 },
 {
+  'english': 'Pig',
+  'welsh': 'Mochyn'
+},
+{
   'english': 'Egg',
   'welsh': 'Wy'
 },
@@ -168,12 +204,32 @@ var wordBank = [{
   'welsh': 'Syndod'
 },
 {
+  'english': 'Suit',
+  'welsh': 'Siwt'
+},
+{
   'english': 'Microwave',
   'welsh': 'Meicrodon'
 },
 {
+  'english': 'Wear',
+  'welsh': 'Gwisgo'
+},
+{
+  'english': 'Clothes',
+  'welsh': 'Dillad'
+},
+{
+  'english': 'Gloves',
+  'welsh': 'Menig'
+},
+{
   'english': 'Jacket',
   'welsh': 'Siaced'
+},
+{
+  'english': 'Trousers',
+  'welsh': 'Trowsus'
 },
 {
   'english': 'Shoes',
@@ -194,6 +250,10 @@ var wordBank = [{
 {
   'english': 'Swimming',
   'welsh': 'Nofio'
+},
+{
+  'english': 'Rugby',
+  'welsh': 'Rygbi'
 },
 {
   'english': 'Learn',
@@ -240,6 +300,26 @@ var wordBank = [{
   'welsh': 'Crys'
 },
 {
+  'english': 'Dress',
+  'welsh': 'Ffrog'
+},
+{
+  'english': 'Hat',
+  'welsh': 'Het'
+},
+{
+  'english': 'Tie',
+  'welsh': 'Tei'
+},
+{
+  'english': 'Wait',
+  'welsh': 'Aros'
+},
+{
+  'english': 'Bike',
+  'welsh': 'Beic'
+},
+{
   'english': 'Milk',
   'welsh': 'Llaeth'
 },
@@ -261,7 +341,7 @@ var wordBank = [{
 },
 {
   'english': 'Three',
-  'welsh': 'Tre'
+  'welsh': 'Tri'
 },
 {
   'english': 'Four',
@@ -304,8 +384,48 @@ var wordBank = [{
   'welsh': 'Ger'
 },
 {
+  'english': 'Visit',
+  'welsh': 'Ymweld'
+},
+{
+  'english': 'Play',
+  'welsh': 'Chwarae'
+},
+{
+  'english': 'Squash',
+  'welsh': 'Sboncen'
+},
+{
+  'english': 'Black',
+  'welsh': 'Du'
+},
+{
+  'english': 'Pink',
+  'welsh': 'Pinc'
+},
+{
+  'english': 'Blue',
+  'welsh': 'Glas'
+},
+{
+  'english': 'Red',
+  'welsh': 'Coch'
+},
+{
+  'english': 'Green',
+  'welsh': 'Gwyrdd'
+},
+{
+  'english': 'Deer',
+  'welsh': 'Carw'
+},
+{
   'english': 'Library',
   'welsh': 'Llyfrgell'
+},
+{
+  'english': 'Pub',
+  'welsh': 'Tafarn'
 },
 {
   'english': 'Hospital',
@@ -320,6 +440,10 @@ var wordBank = [{
   'welsh': 'Tŷ'
 },
 {
+  'english': 'Beach',
+  'welsh': 'Traeth'
+},
+{
   'english': 'Doctor',
   'welsh': 'Meddyg'
 },
@@ -330,6 +454,110 @@ var wordBank = [{
 {
   'english': 'Police',
   'welsh': 'Heddlu'
+},
+{
+  'english': 'Nurse',
+  'welsh': 'Nyrs'
+},
+{
+  'english': 'Farmer',
+  'welsh': 'Ffermwr'
+},
+{
+  'english': 'Falling',
+  'welsh': 'Cwympo'
+},
+{
+  'english': 'Month',
+  'welsh': 'Mis'
+},
+{
+  'english': 'January',
+  'welsh': 'Ionawr'
+},
+{
+  'english': 'February',
+  'welsh': 'Chwefror'
+},
+{
+  'english': 'March',
+  'welsh': 'Mawrth'
+},
+{
+  'english': 'April',
+  'welsh': 'Ebrill'
+},
+{
+  'english': 'May',
+  'welsh': 'Mai'
+},
+{
+  'english': 'June',
+  'welsh': 'Mehefin'
+},
+{
+  'english': 'July',
+  'welsh': 'Gorffennaf'
+},
+{
+  'english': 'August',
+  'welsh': 'Awst'
+},
+{
+  'english': 'September',
+  'welsh': 'Medi'
+},
+{
+  'english': 'October',
+  'welsh': 'Hydref'
+},
+{
+  'english': 'November',
+  'welsh': 'Tachwedd'
+},
+{
+  'english': 'December',
+  'welsh': 'Rhagfyr'
+},
+{
+  'english': 'Spring',
+  'welsh': 'Y Gwanwyn'
+},
+{
+  'english': 'Summer',
+  'welsh': 'Yr Haf'
+},
+{
+  'english': 'Autumn',
+  'welsh': 'Yr Hydref'
+},
+{
+  'english': 'Winter',
+  'welsh': 'Y Gaeaf'
+},
+{
+  'english': 'Married',
+  'welsh': 'Priodi'
+},
+{
+  'english': 'Dad',
+  'welsh': 'Tad'
+},
+{
+  'english': 'Mum',
+  'welsh': 'Mam'
+},
+{
+  'english': 'Sister',
+  'welsh': 'Chwaer'
+},
+{
+  'english': 'Brother',
+  'welsh': 'Brawd'
+},
+{
+  'english': 'Know',
+  'welsh': 'Nabod'
 },
 ];
 
