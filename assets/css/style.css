@@ -142,8 +142,6 @@ header {
 #congrats {
     background-color: var(--off-white);
     max-width: var(--max-width);
-    margin-left: 5%;
-    margin-right: 5%;
     text-align: center;
     border: 5px solid var(--mid-green);
 }
