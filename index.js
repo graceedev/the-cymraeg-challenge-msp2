@@ -520,22 +520,6 @@ var wordBank = [{
   'welsh': 'Rhagfyr'
 },
 {
-  'english': 'Spring',
-  'welsh': 'Y Gwanwyn'
-},
-{
-  'english': 'Summer',
-  'welsh': 'Yr Haf'
-},
-{
-  'english': 'Autumn',
-  'welsh': 'Yr Hydref'
-},
-{
-  'english': 'Winter',
-  'welsh': 'Y Gaeaf'
-},
-{
   'english': 'Married',
   'welsh': 'Priodi'
 },
@@ -615,7 +599,7 @@ if (x.style.display === "none") {
 }
 }
 
-/*Close how to text when click anywhere else on the page (code tutorial from https://www.blustemy.io/detecting-a-click-outside-an-element-in-javascript/*/ 
+/*Close how to text when click anywhere else on the page (code tutorial from https://www.blustemy.io/detecting-a-click-outside-an-element-in-javascript/)*/ 
 document.addEventListener("click", (evt) => {
   const howToButton = document.getElementById("how-to");
   let targetElement = evt.target;
@@ -629,9 +613,11 @@ document.addEventListener("click", (evt) => {
   }
 );
 
+
 /* Start game - reveal cards, remove play button*/
 function changeCards() {
 resetGame();
+startTimer();
 const cardContainer = [];
 
 /* Generate random set of six word pairs*/
@@ -739,13 +725,79 @@ for (i = 0; i < tableEntryWel.length; i++) {
 
 }
 
+/* Timer (code tutorial from https://dev.to/gspteck/create-a-stopwatch-in-javascript-2mak)*/ 
+const timer = document.getElementById('timer');
+
+var hr = 0;
+var min = 0;
+var sec = 0;
+var stoptime = true;
+
+/*start timer*/
+function startTimer() {
+  if (stoptime == true) {
+        stoptime = false;
+        timerCycle();
+    }
+}
+
+/*stop timer*/
+function stopTimer() {
+  if (stoptime == false) {
+    stoptime = true;
+  }
+}
+
+function timerCycle() {
+    if (stoptime == false) {
+    sec = parseInt(sec);
+    min = parseInt(min);
+    hr = parseInt(hr);
+
+    sec = sec + 1;
+
+    if (sec == 60) {
+      min = min + 1;
+      sec = 0;
+    }
+    if (min == 60) {
+      hr = hr + 1;
+      min = 0;
+      sec = 0;
+    }
+
+    if (sec < 10 || sec == 0) {
+      sec = '0' + sec;
+    }
+    if (min < 10 || min == 0) {
+      min = '0' + min;
+    }
+    if (hr < 10 || hr == 0) {
+      hr = '0' + hr;
+    }
+
+    timer.innerHTML = hr + ':' + min + ':' + sec;
+
+    setTimeout("timerCycle()", 1000);
+  }
+}
+/* Reset timer*/
+function resetTimer() {
+    timer.innerHTML = "00:00:00";
+    stoptime = true;
+    hr = 0;
+    sec = 0;
+    min = 0;
+}
+
 /*Reset game on Play*/
 function resetGame() {
+
 document.getElementById('congrats').classList.add('hidden');
 
 var x = document.getElementById("btn-play");
 x.style.display = "none";
-
+resetTimer();
 english = [];
 welsh = [];
 
@@ -766,12 +818,14 @@ for (var i = 0; i < cardArray.length; i++) {
 
 /* Show congratulation message at game end */
 function endGame() {
+
 let allDone = document.getElementsByClassName('done');
 
 if (allDone.length === 12) {
   document.getElementById('congrats').classList.remove('hidden');
   ditchOldCards();
   translate();
+  stopTimer();
 }
 
 }
