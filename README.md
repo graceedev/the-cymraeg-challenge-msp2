@@ -165,12 +165,15 @@ When deployed, the website was tested on various OS and devices (detailed in sub
 |Smaller Sizes    |Reduce screensize on devtools|Cards are reduced in size to fit screen| PASS
 |                 |                             |Text resizes and continues to fit within cards| PASS
 |                 |                             |Score remains visible below game area| PASS
+|                 |Win game, reveal congrats text|Congrats text does not go beneath score at bottom| PASS
 |Larger Sizes     |Expand screensize on devtools|Cards expand to suit screen size to a cut off point| PASS
 |                 |                             |Game/navbar elements/score remains central beyond max-width| PASS
 |                 |                             |Score does not block bottom of game area| PASS
 |How-To Text      |Click while cards are visible| Text appears ontop of card elements| PASS
 |                 |Click while play button is visible| Text does not block play button| PASS
 |                 |Click while congrats text is visible|Text remains readable, overlaying congrats text| PASS
+|                 |Click elsewhere on the page when text is visible| Text disappears| PASS
+|                 |Click on How To button when text is visible | Text disappears | PASS
 |Buttons          |Click play button   | Cards are generated in their unclicked state| PASS
 |                 |Click play again button| A new set of cards/words are generated| PASS
 |Animations       |Hover over cards    | Cards should grow on hover BEFORE being clicked| PASS
@@ -186,6 +189,8 @@ When deployed, the website was tested on various OS and devices (detailed in sub
 |                 |                       | Previous 'correct guesses' remain visible| PASS
 |Congrats text    |Play game, win, then press Play Again and win| Translation table appears with words covered in the previous game| PASS
 |                 |Play game, win then press Play Again |Congrats text and children disappear| PASS
+|Timer            |Play game through twice |Timer resets after each game | PASS
+|                 |Finish game         | Time taken to complete game displayed in congrats text| PASS
 |Score            |Play game, win, then press Play Again| Score carries over to next game| PASS
 |                 |Make incorrect guess| Score does not increase| PASS
 
@@ -282,7 +287,7 @@ the cards before the next game, this was fixed.
 
 ### Credits
 Thank you to my mentor Brian for his continued support during this course. 
-Thank you to John the tutor for his input and patience during this project. 
+Thank you to John the tutor for his input and patience during this project.
 
 All code is my own unless otherwise stated.
 Tutorials were used to help create the timer functions and close how-to text on click anywhere on the page.
