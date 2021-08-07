@@ -214,6 +214,7 @@ the cards before the next game, this was fixed.
 FIX issue where words that did not match disappeared instantly. This was fixed with a timeout which allows 250 milliseconds before readding the hidden class.
 FIX issue where clickedCards and dataCompare were not emptying when greater than 2 in length. This was fixed with emptying the array after comparing the values within.
 FIX cards could be clicked when two incorrect cards were visible. A new function removing the event handler from cards when more than one incorrect card is open was added.
+FIX after an incorrect guess, the second card was not going back to original size after click. This was fixed by changing the property of card:active.
 BUG website does not work on Internet Explorer (see previous sections for more details).
 
 ### Credits

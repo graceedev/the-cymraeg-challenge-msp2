@@ -178,6 +178,10 @@ table {
     cursor: pointer;
 }
 
+.card:active, .card:focus {
+    animation-name: none;
+}
+
 .card.done {
     background: var(--dk-red);
     cursor: default;
