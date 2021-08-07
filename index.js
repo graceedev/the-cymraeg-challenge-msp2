@@ -520,22 +520,6 @@ var wordBank = [{
   'welsh': 'Rhagfyr'
 },
 {
-  'english': 'Spring',
-  'welsh': 'Y Gwanwyn'
-},
-{
-  'english': 'Summer',
-  'welsh': 'Yr Haf'
-},
-{
-  'english': 'Autumn',
-  'welsh': 'Yr Hydref'
-},
-{
-  'english': 'Winter',
-  'welsh': 'Y Gaeaf'
-},
-{
   'english': 'Married',
   'welsh': 'Priodi'
 },
@@ -615,7 +599,7 @@ if (x.style.display === "none") {
 }
 }
 
-/*Close how to text when click anywhere else on the page*/ 
+/*Close how to text when click anywhere else on the page (code tutorial from https://www.blustemy.io/detecting-a-click-outside-an-element-in-javascript/)*/ 
 document.addEventListener("click", (evt) => {
   const howToButton = document.getElementById("how-to");
   let targetElement = evt.target;
@@ -741,7 +725,7 @@ for (i = 0; i < tableEntryWel.length; i++) {
 
 }
 
-/* Timer */ 
+/* Timer (code tutorial from https://dev.to/gspteck/create-a-stopwatch-in-javascript-2mak)*/ 
 const timer = document.getElementById('timer');
 
 var hr = 0;
