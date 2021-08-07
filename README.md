@@ -1,4 +1,5 @@
 # The Cymraeg Challenge 
+
 ## About
 The Cymraeg Challenge is an interactive game where users click on cards to reveal a Welsh or an English word. Users then have to try and match the word to its translation. When users match the cards correctly, the cards will disappear, and a point will be added to the score at the bottom of the page. When a user has incorrectly chosen a word pair, the card will ‘flip back over’, hiding the words on them and the game continues.  On finding all the word pairs, a notification congratulating the user on completing the game and asking if they want to play again will appear. 
 In the header, there will be a ‘how to play’ link under the title. When clicked on, a notification telling users how to play the game will appear. 
@@ -97,7 +98,11 @@ In the future this game could be expanded to add more Welsh words. It could also
 
 ### Validator Results
 
-Code was run through HTML, CSS and JSHint validators. There were no errors found on either the HTML and CSS validators. Please see html.validate.png and css.validate.png for screenshots.
+![Screenshot of HTML validator results](testing/html-validate.png)
+![Screenshot of CSS validator results](testing/css.validate.png)
+
+Code was run through HTML, CSS and JSHint validators. There were no errors found on either the HTML and CSS validators. 
+
 The JSHint flagged no major errors.
 
 ### Usability Testing
@@ -158,6 +163,11 @@ The website has been tested on iOS and android. Apart from similar issues with t
 The website scored the following: Performance = 100, Accessibility = 100, Best Practices = 93, SEO = 91.
 
 ### User Stories
+
+![Mockup of opening screen](read-me-img/challenge-mockup-1.png)
+![Mockup of cards as they first appear](read-me-img/challenge-mockup-2.png)
+![Mockup of game with how to text open](read-me-img/challenge-mockup-3.png)
+
 #### Users who are learning Welsh and want to consolidate their skills
 Incidental Welsh words used in the how-to text are provided in italics as expected for translations into a language, while the English version is in bold above. The game provides visual cues as to whether your guess is correct or incorrect. If it is incorrect, the card will return to its pre-click state. If it is correct, the card will turn green, remain on screen and the score will increase. If all the cards have dissapeared,
 the game will end and a congratulations message will appear.
