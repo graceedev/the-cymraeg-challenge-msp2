@@ -615,6 +615,20 @@ if (x.style.display === "none") {
 }
 }
 
+/*Close how to text when click anywhere else on the page*/ 
+document.addEventListener("click", (evt) => {
+  const howToButton = document.getElementById("how-to");
+  let targetElement = evt.target;
+
+    if (targetElement == howToButton) {
+      clickHowTo();
+      return;
+    } else {
+      document.getElementById("how-to-text").style.display = "none";
+    }
+  }
+);
+
 /* Start game - reveal cards, remove play button*/
 function changeCards() {
 resetGame();
