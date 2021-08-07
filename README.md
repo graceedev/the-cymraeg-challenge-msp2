@@ -49,7 +49,24 @@ As this game is the Cymraeg Challenge and intended for users who wish the learn 
 ### Skeleton
 
 #### Layout
-This website consists of just one page. Within this page, users can issue forth a text box that is hidden on load with instructions of how to play the game.
+This website consists of just one page. A max width was set so that the content remains central on very large screen sizes. While the site looks best on desktop, it can
+also be used on mobile as this was considered the starting point for the overall design. 
+
+Where appropriate, margins and padding was added to elements to ensure elements are readable and easy to interact with across all screen sizes.
+
+The original plans, created on Balsamiq, can be seen before. It can be seen that I have remained faithful to the original designs.
+
+#### Wireframe of landing page
+![Wireframe of opening screen](read-me-img/wireframes/wireframe-landing.png)
+
+#### Wireframe of page with the game cards revealed
+![Wireframe of screen with game open](read-me-img/wireframes/wireframe-game.png)
+
+#### Wireframe of page with help text visible
+![Wireframe of screen with help text open](read-me-img/wireframes/wireframe-help.png)
+
+#### Wireframe of page with congratulation text visible
+![Wireframe of screen with congratulation text open](read-me-img/wireframes/wireframe-congrats.png)
 
 ### Features
 
