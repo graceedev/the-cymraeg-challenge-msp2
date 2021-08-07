@@ -154,7 +154,8 @@ The website has been tested on iOS and android. Apart from similar issues with t
 
 ### Performance Testing
 
-Please see lighthouse-mob.png for evidence of Lighthouse Testing. The website scored the following: Performance = 100, Accessibility = 100, Best Practices = 93, SEO = 91.
+![Screenshot of lighthouse testing](testing/lighthouse-mob.png)
+The website scored the following: Performance = 100, Accessibility = 100, Best Practices = 93, SEO = 91.
 
 ### User Stories
 #### Users who are learning Welsh and want to consolidate their skills
