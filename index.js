@@ -324,10 +324,6 @@ var wordBank = [{
   'welsh': 'Llaeth'
 },
 {
-  'english': 'Enjoy',
-  'welsh': 'Mwynhau'
-},
-{
   'english': 'Like',
   'welsh': 'Hoffi'
 },
