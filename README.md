@@ -68,6 +68,20 @@ The original plans, created on Balsamiq, can be seen before. It can be seen that
 #### Wireframe of page with congratulation text visible
 ![Wireframe of screen with congratulation text open](read-me-img/wireframes/wireframe-congrats.png)
 
+#### Mockups
+
+Opening Screen
+![Mockup of opening screen](read-me-img/challenge-mockup-1.png)
+
+Cards revealed
+![Mockup of cards as they first appear](read-me-img/challenge-mockup-2.png)
+
+How to Text open
+![Mockup of game with how to text open](read-me-img/challenge-mockup-3.png)
+
+Congratulations text open
+![Mockup of game with congratulation text open](read-me-img/challenge-mockup-4.png)
+
 ### Features
 
 #### Logo and Navbar
@@ -181,34 +195,41 @@ The website scored the following: Performance = 100, Accessibility = 100, Best P
 
 ### User Stories
 
-![Mockup of opening screen](read-me-img/challenge-mockup-1.png)
-![Mockup of cards as they first appear](read-me-img/challenge-mockup-2.png)
-![Mockup of game with how to text open](read-me-img/challenge-mockup-3.png)
+To recap, the user stories identified at the beginning of this project were as follows:
 
-#### Users who are learning Welsh and want to consolidate their skills
-Incidental Welsh words used in the how-to text are provided in italics as expected for translations into a language, while the English version is in bold above. The game provides visual cues as to whether your guess is correct or incorrect. If it is incorrect, the card will return to its pre-click state. If it is correct, the card will turn green, remain on screen and the score will increase. If all the cards have dissapeared,
-the game will end and a congratulations message will appear.
-The congratulations message also contains incidental welsh with translation. There is a translation table below with the words covered in the previous game so learners can consolidate their skills. Learners are then prompted to play again, with a new set of words. A running score at the bottom of the page shows the accumulated score over multiple games, so learners can set their own goals to earn as many points as possible.
+* Users who are learning Welsh and want to consolidate their skills
+* Users who want a fun game to kill some time
 
+As a developer/business I expect: 
 
-#### Users who want a fun game to kill some time
-The play button is located in a central eye-catching position on the page to start the game immediately. A 'how to play' button is located on the top right of the page and is available at any time. When clicked it provides information as to how to play the game, which is clear and concise. The game has reactive elements, such as the cards expanding on hover and the background of the cards changing when clicked on to provide visual interest. There is a score at the bottom to reward the user with correct guesses
-and playing multiple games. The game ends with a congratulations message which also provides a button to start a new game with a new set of words. Cards are always in a random order.
+* An engaging interactive game which makes users want to play again 
+* A responsive website that attracts users
 
-#### A user may want
-A congratulation message to notify you when you have won the game
-Congratulation message shows when all cards are matched. Contains a button to play again. Also contains a translation table to recap what has been covered in the game.
+To address how the needs of these users are met by this website, screenshots of revelant features will be included below followed by a brief explanation.
 
-A running score during the game
-The score is always visible at the bottom of the screen. Score carries over between games as this allows users to keep some kind of track on how many times they have played.
+#### Interactive Elements
+![Screengrab of cards at different states of interaction](read-me-img/cymraeg-screengrab-2.png)
 
-#### As a developer/business I expect
-An engaging interactive game which makes users want to play again 
-Game contains many interactive elements such as clickable cards, a how to button which reveals text and cards that change colour/background on clicks. It is quick and easy to play. Users are prompted to play again immediately after finishing a game.
+The site includes many interactive elements, including cards that change on hover, on click and on a correct match. Cards become slightly larger when hovered over, reveal their inner text and change to a red colour on click and on a correct guess, turn green. Should two cards not match, their innner text remains visible for a quarter of a second before returning to their pre-click state. This creates a fun and engaging environment for users. The colours of the cards serve as a visual cue that a guess was correct or incorrect, however, the game does not rely on being able to distinguish between the colours in order to play. The innertext disappearing or remaining visible as well as the score increasing, also indicates to users that they were correct or incorrect in their guess.
 
-A responsive website that attracts users
-Game is responsively sized and works across a variety of platforms. It has a minimalist design which focuses on the game being entertaining enough to want to play over and over. 
-The colour scheme and imagery are consistent through out and suit each other well.
+Each correct guess adds 10 to the score at the bottom. This serves as an additional reward to users encouraging them to play again. 
+
+![Screengrab of help text visible](read-me-img/cymraeg-screengrab-3.png)
+
+Other interactive elements include the play buttons and the how to play button. Hovering over the how to play button changes its background to a dark red and its text to an off white. This remains on click. The text informs users how to play the game. As it is rather self explanatory, its short and does not require a lot of prior knowledge of the welsh language to play. To close the text, users can either click again on the how to play button or click anywhere else on the screen for an easy exit. 
+
+Changes to the cursor also indicate to users that an element is interactive. 
+
+#### Congratulation Text
+![Screengrab of congratulation text](read-me-img/cymraeg-screengrab-1.png)
+
+The congratulation text appears after finishing a game by matching all the cards available. For users hoping to improve their Welsh language skills, it contains a table of translations covering the words featued in the previous game, so they can consolidate their knowledge. The game logs how long it took for the user to complete the game and the time is shown on this screen, before being reset when Play Again is clicked. The Score at the bottom remains displayed and will carry over to the next game. For both user groups, this provides a gameified experience. Users may choose to beat their previous score every day as a way of revising their vocabulary skills, or want to complete the next game faster than the last time. Users are encouraged to play again with the prominent Play Again button at the bottom, which resets the cards with a new set of words. This keeps the game fresh and fun, and means that learners can learn more words each time they play. 
+
+#### Responsive Design 
+![Screengrab of website on mobile phone](read-me-img/cymraeg-screengrab-4.png)
+
+As this is a quick and not particularly tasking game, it only makes sense that it would suit mobile phone useage. For users who just want to kill five minutes waiting for a bus, the website will appear to be appropriately sized and still playable on most mobile phones. The smallest screen size accounted for is 320px in width, and the website should remain well-designed and playable at all sizes upwards from this. 
+
 
 ### Deployment
 #### Deploying via GitHub Pages
