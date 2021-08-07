@@ -615,7 +615,7 @@ if (x.style.display === "none") {
 }
 }
 
-/*Close how to text when click anywhere else on the page*/ 
+/*Close how to text when click anywhere else on the page (code tutorial from https://www.blustemy.io/detecting-a-click-outside-an-element-in-javascript/*/ 
 document.addEventListener("click", (evt) => {
   const howToButton = document.getElementById("how-to");
   let targetElement = evt.target;
