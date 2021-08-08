@@ -48,12 +48,19 @@ The main colour scheme is an off-white colour (chosen to reduce eyestrain compar
 The colour scheme was directly lifted from the colours of the Welsh flag using Coolors, and then adjusted to improve contrast ratings in accordance with WebAIM. The colours do not impact on the ability to play the game, making it accessible for those who are red/green colour blind. Should these colours need to be changed in the future, these colours have been stored as root variables.
 
 #### Typography
-Karla was imported from google fonts for use in this project. Karla was chosen for its simple appearance and readability. As a sans-serif font, it avoids some of the issues associated with letters blending together for dyslexic readers.
+Karla was imported from google fonts for use in this project. Karla was chosen for its simple appearance and readability. As a sans-serif font, it avoids some of the issues associated with letters blending together for dyslexic readers. The letters are well spaced as standard.
+
+This font was imported by including the following code at the top of the CSS file:
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap')
+
 In most intances, the font has been increased in size to improve readability.
 
 #### Call to Action
 The main call the action (the play button) is placed in a central location on the screen. It has a green border to draw attention to it and the font size has been considerably increased. Upon hovering, the cursor changes to a pointer to indicate that it can be clicked on.
+
 The same is true of the How to Play button. As it is only intended to be viewed once (the game is pretty simple!), it is smaller and has a different colour scheme when clicked on. The buttons have a rounded border to contrast them from any text boxes which have a squared off border.
+
+The cursor changes for all clickable elements on the website. 
 
 #### Imagery
 As this game is the Cymraeg Challenge and intended for users who wish the learn welsh vocabulary, it made sense to use imagery associated with Wales. On load, the cards have a daffodil background (the national flower of Wales). On click, this dissapears so the text contained within the cards is easy to read. 
@@ -122,7 +129,8 @@ The footer consists of a Score element which is updated everytime a user scores 
 Descriptions, author’s name, and keywords were included in the head element to increase traffic to the website. 
 
 #### Future Features
-In the future this game could be expanded to add more Welsh words. The wordBank could be seperated into different subject areas, such as 'Animals', 'Clothes' or 'Places. It could also be expanded to include different levels of difficulty, either by creating a new 'harder' bank of Welsh/English words or introducing a time limit. A social element could be added, where users could compare their times with others. If I had more time, I would have liked to add a function which removes points based on how long it took to complete the challenge. 
+In the future this game could be expanded to add more Welsh words. The wordBank could be seperated into different subject areas, such as 'Animals', 'Clothes' or 'Places. It could also be expanded to include different levels of difficulty, either by creating a new 'harder' bank of Welsh/English words or introducing a time limit. A social element could be added, where users could compare their times with others. 
+If I had more time, I would have liked to add a function which removes points based on how long it took to complete the challenge. 
 
 ### Technologies Used
 * HTML5
@@ -198,6 +206,9 @@ When deployed, the website was tested on various OS and devices (detailed in sub
 
 To ensure that the words remain appropriately sized within cards, a media query was used to target very small screen sizes to make the font smaller. 
 On screens bigger than 1500px, the max-width of the main page elemets, the website is still functional and no elements stretch or warp. Text remains clear on very small to very large sizes.
+
+![Screenshot of WAVE test results](testing/wave-test.png)
+The website was also run through WAVE testing to check for accessibility, with no errors. 
 
 ### Browser Compatibility
 The website has been tested on chrome, internet explorer, safari and firefox. Apart from some differences in styling, the website works consistently across platforms. Safari does not load the background image of the cards
